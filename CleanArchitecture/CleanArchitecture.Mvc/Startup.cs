@@ -29,7 +29,7 @@ namespace CleanArchitecture.Mvc
         {
             services.AddDbContext<ApplicationDbContext>(options =>
                 options.UseSqlServer(
-                    Configuration.GetConnectionString("UniversityIdentityDBConnection")));
+                    Configuration.GetConnectionString("BookStoreDBConnection")));
             services.AddDatabaseDeveloperPageExceptionFilter();
 
             services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
