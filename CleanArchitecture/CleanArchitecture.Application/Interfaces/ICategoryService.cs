@@ -9,6 +9,6 @@ namespace CleanArchitecture.Application.Interfaces
 {
     public interface ICategoryService
     {
-        IEnumerable<CategoryViewModel> GetCategories();
+        CategoryViewModel GetCategories();
     }
 }
