@@ -1,3 +1,4 @@
+using CleanArchitecture.Infrastructure.Data.Context;
 using CleanArchitecture.Mvc.Data;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -29,11 +30,16 @@ namespace CleanArchitecture.Mvc
         {
             services.AddDbContext<ApplicationDbContext>(options =>
                 options.UseSqlServer(
-                    Configuration.GetConnectionString("BookStoreDBConnection")));
+                    Configuration.GetConnectionString("BookStoreIdentityDBConnection")));
             services.AddDatabaseDeveloperPageExceptionFilter();
 
             services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
                 .AddEntityFrameworkStores<ApplicationDbContext>();
+
+            services.AddDbContext<BookStoreDBContext>(options =>
+                options.UseSqlServer(
+                    Configuration.GetConnectionString("BookStoreDBConnection")));
+
             services.AddControllersWithViews();
         }
 
