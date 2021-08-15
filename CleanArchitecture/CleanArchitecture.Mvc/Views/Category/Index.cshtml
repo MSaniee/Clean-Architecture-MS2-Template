@@ -1,0 +1,17 @@
+﻿@model CleanArchitecture.Application.ViewModels.CategoryViewModel
+
+<div class="container body-content">
+    <div class="row category-content">
+        @foreach(var category in Model.Categories)
+            {
+                <div class="category-image-container">
+                    <div class="category-image" style="background-image:url(@category.ImageUrl)"></div>
+                </div>
+
+                <span>
+                    @category.Name
+                </span>
+            }
+    </div>
+</div>
+
