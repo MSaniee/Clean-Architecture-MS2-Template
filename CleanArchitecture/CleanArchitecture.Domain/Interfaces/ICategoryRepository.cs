@@ -10,5 +10,6 @@ namespace CleanArchitecture.Domain.Interfaces
     public interface ICategoryRepository
     {
         IEnumerable<Category> GetCategories();
+        void Add(Category category);
     }
 }

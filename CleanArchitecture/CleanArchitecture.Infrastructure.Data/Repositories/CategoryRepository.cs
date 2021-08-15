@@ -14,6 +14,12 @@ namespace CleanArchitecture.Infrastructure.Data.Repositories
             _context = context;
         }
 
+        public void Add(Category category)
+        {
+            _context.Add(category);
+            _context.SaveChanges();
+        }
+
         public IEnumerable<Category> GetCategories() => _context.Categories;
     }
 }
