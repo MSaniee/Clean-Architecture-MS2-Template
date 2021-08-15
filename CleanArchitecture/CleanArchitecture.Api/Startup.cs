@@ -1,3 +1,4 @@
+using CleanArchitecture.Infrastructure.IoC;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -28,6 +29,8 @@ namespace CleanArchitecture.Api
         {
 
             services.AddControllers();
+            RegisterServices(services);
+
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "CleanArchitecture.Api", Version = "v1" });
@@ -54,6 +57,11 @@ namespace CleanArchitecture.Api
             {
                 endpoints.MapControllers();
             });
+        }
+
+        private static void RegisterServices(IServiceCollection services)
+        {
+            DependencyContainer.RegisterServices(services);
         }
     }
 }
