@@ -3,6 +3,8 @@ using CleanArchitecture.Application.Services;
 using CleanArchitecture.Domain.CommandHandlers;
 using CleanArchitecture.Domain.Commands;
 using CleanArchitecture.Domain.Core.Bus;
+using CleanArchitecture.Domain.Entities;
+using CleanArchitecture.Domain.Features.Players.Queries;
 using CleanArchitecture.Domain.Interfaces;
 using CleanArchitecture.Infrastructure.Bus;
 using CleanArchitecture.Infrastructure.Data.Context;
@@ -14,6 +16,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using static CleanArchitecture.Domain.Features.Players.Queries.GetAllPlayersQuery;
 
 namespace CleanArchitecture.Infrastructure.IoC
 {
@@ -26,12 +29,16 @@ namespace CleanArchitecture.Infrastructure.IoC
 
             //Domain Handlers
             services.AddScoped<IRequestHandler<CreateCategoryCommand, bool>, CategoryCommandHandler>();
+            services.AddScoped<IRequestHandler<GetAllPlayersQuery, IEnumerable<Player>>, GetAllPlayersQueryHandler>();
 
             //Application Layer
             services.AddScoped<ICategoryService, CategoryService>();
+            services.AddScoped<IPlayersService, PlayersService>();
+
 
             //Infra.Data
             services.AddScoped<ICategoryRepository, CategoryRepository>();
+            services.AddScoped<IPlayerRepository, PlayerRepository>();
 
             //??
             services.AddScoped<BookStoreDBContext>();

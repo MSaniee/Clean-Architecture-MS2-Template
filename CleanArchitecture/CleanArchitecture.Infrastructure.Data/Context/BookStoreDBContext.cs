@@ -16,5 +16,6 @@ namespace CleanArchitecture.Infrastructure.Data.Context
         }
 
         public DbSet<Category> Categories { get; set; }
+        public DbSet<Player> Players { get; set; }
     }
 }
