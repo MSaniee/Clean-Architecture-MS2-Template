@@ -2,7 +2,7 @@
 using System.Collections;
 using System.Linq;
 
-namespace Common.Utilities
+namespace MS2Project.Common
 {
     public static class Assert
     {

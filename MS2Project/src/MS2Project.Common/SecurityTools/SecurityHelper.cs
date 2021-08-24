@@ -3,7 +3,7 @@ using System;
 using System.Security.Cryptography;
 using System.Text;
 
-namespace Common.Utilities
+namespace MS2Project.Common.SecurityTools
 {
     public static class SecurityHelper
     {

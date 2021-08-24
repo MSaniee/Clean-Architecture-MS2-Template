@@ -1,7 +1,7 @@
 ﻿using System;
 using System.IO;
 
-namespace Common.Utilities
+namespace MS2Project.Common.JsonTools
 {
     public class SettingsJsonConfiguer
     {

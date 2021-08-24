@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Common.Utilities
+namespace MS2Project.Common.StringTools
 {
     public static class StringExtensions
     {
