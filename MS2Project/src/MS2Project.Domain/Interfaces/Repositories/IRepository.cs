@@ -1,5 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using MS2Project.Domain.Entities;
+using MS2Project.Domain.Core.Bases;
 using System;
 using System.Collections.Generic;
 using System.Linq;

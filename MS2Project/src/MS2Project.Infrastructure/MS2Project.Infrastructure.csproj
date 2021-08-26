@@ -1,0 +1,27 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Folder Include="Bus\RabbitMQ\" />
+    <Folder Include="Data\MongoDb\" />
+    <Folder Include="Data\Repositories\" />
+    <Folder Include="Data\SqlServer\Dapper\" />
+    <Folder Include="Data\SqlServer\EfCore\EntityConfigurations\" />
+    <Folder Include="Data\SqlServer\EfCore\Context\" />
+    <Folder Include="Logging\" />
+    <Folder Include="Services\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Autofac" Version="6.2.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\MS2Project.Application\MS2Project.Application.csproj" />
+    <ProjectReference Include="..\MS2Project.Common\MS2Project.Common.csproj" />
+  </ItemGroup>
+
+</Project>
