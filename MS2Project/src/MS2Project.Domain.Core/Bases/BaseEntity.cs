@@ -1,4 +1,4 @@
-﻿namespace MS2Project.Domain.Entities
+﻿namespace MS2Project.Domain.Core.Bases
 {
     public interface IEntity
     {

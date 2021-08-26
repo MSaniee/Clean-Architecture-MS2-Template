@@ -10,6 +10,11 @@
 
   <ItemGroup>
     <ProjectReference Include="..\MS2Project.Common\MS2Project.Common.csproj" />
+    <ProjectReference Include="..\MS2Project.Domain.Core\MS2Project.Domain.Core.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Entities\" />
   </ItemGroup>
 
 </Project>

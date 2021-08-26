@@ -4,4 +4,26 @@
     <TargetFramework>net5.0</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Folder Include="Interfaces\BackgroundJobs\" />
+    <Folder Include="Interfaces\BackgroundServices\" />
+    <Folder Include="Interfaces\Services\" />
+    <Folder Include="BackgroundJobs\" />
+    <Folder Include="BackgroundServices\" />
+    <Folder Include="DataInitializer\" />
+    <Folder Include="Mapping\CustomMappings\" />
+    <Folder Include="Utilities\Constants\" />
+    <Folder Include="Validations\" />
+    <Folder Include="Services\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="10.1.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\MS2Project.Common\MS2Project.Common.csproj" />
+    <ProjectReference Include="..\MS2Project.Domain\MS2Project.Domain.csproj" />
+  </ItemGroup>
+
 </Project>
