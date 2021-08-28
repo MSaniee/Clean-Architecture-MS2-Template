@@ -17,6 +17,8 @@
 
   <ItemGroup>
     <PackageReference Include="Autofac" Version="6.2.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Relational" Version="5.0.9" />
+    <PackageReference Include="Pluralize.NET" Version="1.0.2" />
   </ItemGroup>
 
   <ItemGroup>
