@@ -1,0 +1,18 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Folder Include="Areas\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\MS2Project.Application\MS2Project.Application.csproj" />
+    <ProjectReference Include="..\MS2Project.Common\MS2Project.Common.csproj" />
+    <ProjectReference Include="..\MS2Project.Infrastructure\MS2Project.Infrastructure.csproj" />
+    <ProjectReference Include="..\MS2Project.WebFramework\MS2Project.WebFramework.csproj" />
+  </ItemGroup>
+
+</Project>
