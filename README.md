@@ -32,7 +32,7 @@ In this repository I have prepared a **clean architectural Template** for **visu
 ![Clean Architecture MS2](https://user-images.githubusercontent.com/39134345/131918266-f90f9b9c-0195-4067-9729-28920be57dd8.png)
 
 
-#### Common Layer
+## Common Layer
 
 In this layer there are tools and classes that perhaps they be used in All layers . Actually this layer has nothing to do with project subject and utilities of this layer help us to Improve codding and prevents duplication of classes or methods.
 In this layer we have :
@@ -46,11 +46,12 @@ In this layer we have :
 Also, according to the definition of this layer, shared libraries are located in this area. you can more study about shared libraries in this [link](https://dev.to/rionmonster/sharing-is-caring-using-shared-projects-in-aspnet-e17)
 
 
-#### Domain Layer
+
+## Domain Layer
 
 This will contain all entities, enums, exceptions, interfaces (Interfaeces of repository), types and logic specific to the domain layer.
 
-##### Domain.Core Layer
+### Domain.Core Layer
 
 Also in this layer we have some base classes for example :
 - Settings file
@@ -60,7 +61,8 @@ Also in this layer we have some base classes for example :
 - LifieTime interfaces
 
 
-#### Application Layer
+
+## Application Layer
 
 Application layer contains business logic and types :
 - Application Interfaces
@@ -74,7 +76,8 @@ This is the Application of your Domain use to implement the use cases for your b
 Validation also goes into this layer…
 
 
-#### Infrastructure Layer
+
+## Infrastructure Layer
 
 -	Database
 -	Web services
@@ -86,7 +89,9 @@ Validation also goes into this layer…
 The Infrastructure Layer will implement interfaces from the Application Layer to provide functionality to access external systems. These will be hooked up by the IoC container, usually in the Presentation Layer.
 The Presentation Layer will usually have a reference to the Infrastructure Layer, but only to register the dependencies with the IoC container. This can be avoided with IoC containers like Autofac with the use of Registries and assembly scanning
 
-#### Webframework Layer
+
+
+## Webframework Layer
 
 In this layer we have everything that is about the configurations of the Presentation layer framework :
 
@@ -97,7 +102,8 @@ In this layer we have everything that is about the configurations of the Present
 …
 
 
-#### Presentation Layer
+
+## Presentation Layer
 
 - MVC Controllers
 -	Web API Controllers
