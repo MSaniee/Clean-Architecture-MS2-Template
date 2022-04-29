@@ -1,6 +1,6 @@
-﻿namespace MS2Project.Domain.Core.DILifeTimesType
+﻿namespace MS2Project.Domain.Core.DILifeTimesType;
+
+public interface IScopedDependency
 {
-    public interface IScopedDependency
-    {
-    }
 }
+

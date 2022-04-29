@@ -3,16 +3,14 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Hosting;
 using Microsoft.IdentityModel.Tokens;
-using MS2Project.Domain.Enums;
-using MS2Project.Domain.Exceptions;
+using MS2Project.Domain.Core.Enums;
+using MS2Project.Domain.Core.Exceptions;
 using MS2Project.WebFramework.API.Bases;
 using Newtonsoft.Json;
 using Serilog;
 using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Net;
-using System.Text;
 using System.Threading.Tasks;
 
 namespace MS2Project.WebFramework.API.StartupClassConfigurations.Middlewares
@@ -45,7 +43,7 @@ namespace MS2Project.WebFramework.API.StartupClassConfigurations.Middlewares
             string message = null;
             string stackTrace = null;
             HttpStatusCode httpStatusCode = HttpStatusCode.InternalServerError;
-            ApiResultStatusCode apiStatusCode = ApiResultStatusCode.ServerError;
+            AppResultStatusCode apiStatusCode = AppResultStatusCode.ServerError;
 
             try
             {
@@ -85,7 +83,7 @@ namespace MS2Project.WebFramework.API.StartupClassConfigurations.Middlewares
             {
                 _logger.Error(exception, exception.Message);
                 SetUnAuthorizeResponse(exception);
-                apiStatusCode = ApiResultStatusCode.ExpiredToken;
+                apiStatusCode = AppResultStatusCode.ExpiredToken;
                 await WriteToResponseAsync();
             }
             catch (UnauthorizedAccessException exception)
@@ -127,7 +125,7 @@ namespace MS2Project.WebFramework.API.StartupClassConfigurations.Middlewares
             void SetUnAuthorizeResponse(Exception exception)
             {
                 httpStatusCode = HttpStatusCode.Unauthorized;
-                apiStatusCode = ApiResultStatusCode.UnAuthorized;
+                apiStatusCode = AppResultStatusCode.UnAuthorized;
 
                 if (_env.IsDevelopment())
                 {
