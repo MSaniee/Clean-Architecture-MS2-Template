@@ -2,7 +2,7 @@
 
 namespace MS2Project.Domain.Core.Enums;
 
-public enum AppResultStatusCode
+public enum ResultStatus
 {
     [Display(Name = "عملیات با موفقیت انجام شد")]
     Success = 0,

@@ -1,4 +1,5 @@
 ﻿using MS2Project.Common.EnumTools;
+using MS2Project.Domain.Core.Enums;
 using MS2Project.Domain.Enums;
 using Newtonsoft.Json;
 using System;
@@ -11,7 +12,7 @@ namespace MS2Project.WebFramework.API.Bases
 {
     public class ApiExceptionResult
     {
-        public ApiExceptionResult(bool isSuccess, ApiResultStatusCode statusCode, string message = null, string stackTrace = null)
+        public ApiExceptionResult(bool isSuccess, ResultStatus statusCode, string message = null, string stackTrace = null)
         {
             this.isSuccess = isSuccess;
             this.statusCode = statusCode;
@@ -20,7 +21,7 @@ namespace MS2Project.WebFramework.API.Bases
         }
 
         public bool isSuccess { get; set; }
-        public ApiResultStatusCode statusCode { get; set; }
+        public ResultStatus statusCode { get; set; }
 
         [JsonProperty(NullValueHandling = NullValueHandling.Ignore)]
         public string message { get; set; }

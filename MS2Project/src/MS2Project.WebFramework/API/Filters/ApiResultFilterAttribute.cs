@@ -1,8 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Filters;
-using MS2Project.Domain.Enums;
+using MS2Project.Domain.Core.Enums;
 using MS2Project.WebFramework.API.Bases;
-using System.Linq;
 
 namespace MS2Project.WebFramework.API.Filters
 {
@@ -12,17 +11,17 @@ namespace MS2Project.WebFramework.API.Filters
         {
             if (context.Result is OkObjectResult okObjectResult)
             {
-                var apiResult = new ApiResult<object>(true, ApiResultStatusCode.Success, okObjectResult.Value);
+                var apiResult = new ApiResult<object>(true, ResultStatus.Success, okObjectResult.Value);
                 context.Result = new JsonResult(apiResult) { StatusCode = okObjectResult.StatusCode };
             }
             else if (context.Result is OkResult okResult)
             {
-                var apiResult = new ApiResult(true, ApiResultStatusCode.Success);
+                var apiResult = new ApiResult(true, ResultStatus.Success);
                 context.Result = new JsonResult(apiResult) { StatusCode = okResult.StatusCode };
             }
             else if (context.Result is BadRequestResult badRequestResult)
             {
-                var apiResult = new ApiResult(false, ApiResultStatusCode.BadRequest);
+                var apiResult = new ApiResult(false, ResultStatus.BadRequest);
                 context.Result = new JsonResult(apiResult) { StatusCode = badRequestResult.StatusCode };
             }
             else if (context.Result is BadRequestObjectResult badRequestObjectResult)
@@ -43,28 +42,28 @@ namespace MS2Project.WebFramework.API.Filters
                     message = string.Join(" | ", errorMessages);
                 }
 
-                var apiResult = new ApiResult(false, ApiResultStatusCode.BadRequest, message);
+                var apiResult = new ApiResult(false, ResultStatus.BadRequest, message);
                 context.Result = new JsonResult(apiResult) { StatusCode = 200 }; //badRequestObjectResult.StatusCode };
             }
             else if (context.Result is ContentResult contentResult)
             {
-                var apiResult = new ApiResult(true, ApiResultStatusCode.Success, contentResult.Content);
+                var apiResult = new ApiResult(true, ResultStatus.Success, contentResult.Content);
                 context.Result = new JsonResult(apiResult) { StatusCode = contentResult.StatusCode };
             }
             else if (context.Result is NotFoundResult notFoundResult)
             {
-                var apiResult = new ApiResult(false, ApiResultStatusCode.NotFound);
+                var apiResult = new ApiResult(false, ResultStatus.NotFound);
                 context.Result = new JsonResult(apiResult) { StatusCode = notFoundResult.StatusCode };
             }
             else if (context.Result is NotFoundObjectResult notFoundObjectResult)
             {
-                var apiResult = new ApiResult<object>(false, ApiResultStatusCode.NotFound, notFoundObjectResult.Value);
+                var apiResult = new ApiResult<object>(false, ResultStatus.NotFound, notFoundObjectResult.Value);
                 context.Result = new JsonResult(apiResult) { StatusCode = notFoundObjectResult.StatusCode };
             }
             else if (context.Result is ObjectResult objectResult && objectResult.StatusCode == null
                 && !(objectResult.Value is ApiResult))
             {
-                var apiResult = new ApiResult<object>(true, ApiResultStatusCode.Success, objectResult.Value);
+                var apiResult = new ApiResult<object>(true, ResultStatus.Success, objectResult.Value);
                 context.Result = new JsonResult(apiResult) { StatusCode = objectResult.StatusCode };
             }
 

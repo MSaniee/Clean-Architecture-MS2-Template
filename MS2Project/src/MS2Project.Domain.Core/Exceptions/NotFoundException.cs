@@ -3,32 +3,32 @@
 public class NotFoundException : AppException
 {
     public NotFoundException()
-        : base(AppResultStatusCode.NotFound)
+        : base(ResultStatus.NotFound)
     {
     }
 
     public NotFoundException(string message)
-        : base(AppResultStatusCode.NotFound, message)
+        : base(ResultStatus.NotFound, message)
     {
     }
 
     public NotFoundException(object additionalData)
-        : base(AppResultStatusCode.NotFound, additionalData)
+        : base(ResultStatus.NotFound, additionalData)
     {
     }
 
     public NotFoundException(string message, object additionalData)
-        : base(AppResultStatusCode.NotFound, message, additionalData)
+        : base(ResultStatus.NotFound, message, additionalData)
     {
     }
 
     public NotFoundException(string message, Exception exception)
-        : base(AppResultStatusCode.NotFound, message, exception)
+        : base(ResultStatus.NotFound, message, exception)
     {
     }
 
     public NotFoundException(string message, Exception exception, object additionalData)
-        : base(AppResultStatusCode.NotFound, message, exception, additionalData)
+        : base(ResultStatus.NotFound, message, exception, additionalData)
     {
     }
 }

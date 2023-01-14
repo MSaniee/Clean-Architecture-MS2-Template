@@ -3,32 +3,32 @@
 public class BadRequestException : AppException
 {
     public BadRequestException()
-        : base(AppResultStatusCode.BadRequest)
+        : base(ResultStatus.BadRequest)
     {
     }
 
     public BadRequestException(string message)
-        : base(AppResultStatusCode.BadRequest, message)
+        : base(ResultStatus.BadRequest, message)
     {
     }
 
     public BadRequestException(object additionalData)
-        : base(AppResultStatusCode.BadRequest, additionalData)
+        : base(ResultStatus.BadRequest, additionalData)
     {
     }
 
     public BadRequestException(string message, object additionalData)
-        : base(AppResultStatusCode.BadRequest, message, additionalData)
+        : base(ResultStatus.BadRequest, message, additionalData)
     {
     }
 
     public BadRequestException(string message, Exception exception)
-        : base(AppResultStatusCode.BadRequest, message, exception)
+        : base(ResultStatus.BadRequest, message, exception)
     {
     }
 
     public BadRequestException(string message, Exception exception, object additionalData)
-        : base(AppResultStatusCode.BadRequest, message, exception, additionalData)
+        : base(ResultStatus.BadRequest, message, exception, additionalData)
     {
     }
 }

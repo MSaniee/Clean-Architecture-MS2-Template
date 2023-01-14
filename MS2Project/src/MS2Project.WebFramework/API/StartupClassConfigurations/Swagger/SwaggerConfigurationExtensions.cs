@@ -2,34 +2,29 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.OpenApi.Models;
-using MS2Project.Application.Dtos;
 using Swashbuckle.AspNetCore.Filters;
 using Swashbuckle.AspNetCore.SwaggerGen;
 using Swashbuckle.AspNetCore.SwaggerUI;
-using System;
-using System.IO;
-using System.Linq;
-using System.Reflection;
 
-namespace MS2Project.WebFramework.API.StartupClassConfigurations.Swagger
+namespace MS2Project.WebFramework.API.StartupClassConfigurations.Swagger;
+
+public static class SwaggerConfigurationExtensions
 {
-    public static class SwaggerConfigurationExtensions
+    public static void AddSwagger(this IServiceCollection services)
     {
-        public static void AddSwagger(this IServiceCollection services)
+        services.AddSwaggerExamples();
+        services.AddSwaggerGen(options =>
         {
-            services.AddSwaggerExamples();
-            services.AddSwaggerGen(options =>
+            options.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme
             {
-                options.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme
-                {
-                    Name = "Authorization",
-                    Type = SecuritySchemeType.ApiKey,
-                    Scheme = "Bearer",
-                    BearerFormat = "JWT",
-                    In = ParameterLocation.Header,
-                    Description = "JWT Authorization header using the Bearer scheme."
-                });
-                options.AddSecurityRequirement(new OpenApiSecurityRequirement
+                Name = "Authorization",
+                Type = SecuritySchemeType.ApiKey,
+                Scheme = "Bearer",
+                BearerFormat = "JWT",
+                In = ParameterLocation.Header,
+                Description = "JWT Authorization header using the Bearer scheme."
+            });
+            options.AddSecurityRequirement(new OpenApiSecurityRequirement
                 {
                     {
                           new OpenApiSecurityScheme
@@ -44,55 +39,60 @@ namespace MS2Project.WebFramework.API.StartupClassConfigurations.Swagger
                     }
                 });
 
-                options.TagActionsBy(api => new[] { api.GroupName });
-                options.EnableAnnotations();
-                options.ExampleFilters();
+            options.TagActionsBy(api => new[] { api.GroupName });
+            options.EnableAnnotations();
+            options.ExampleFilters();
 
-                //کد مربوط به اضافه کردن داکیومنت
-                var xmlDocPath = Path.Combine(AppContext.BaseDirectory, "TakSizeAPI.xml");
-                //show controller XML comments like summary
-                options.IncludeXmlComments(xmlDocPath, true);
+            //کد مربوط به اضافه کردن داکیومنت
+            var xmlDocPath = Path.Combine(AppContext.BaseDirectory, "MS2Project.API.xml");
+            //show controller XML comments like summary
+            options.IncludeXmlComments(xmlDocPath, true);
 
-                //options.DescribeAllEnumsAsStrings();
+            //options.DescribeAllEnumsAsStrings();
 
-                options.SwaggerDoc("v1", new OpenApiInfo() { Title = "TakSizeApi-v1", Version = "v1" });
-                options.SwaggerDoc("v2", new OpenApiInfo() { Title = "TakSizeApi-v2", Version = "v2" });
+            options.SwaggerDoc("v1", new OpenApiInfo() { Title = "MS2Project-v1", Version = "v1" });
+            options.SwaggerDoc("v2", new OpenApiInfo() { Title = "MS2Project-v2", Version = "v2" });
 
-                #region Versioning
+            //Add Multilingual 
+            //options.OperationFilter<SwaggerLanguageHeader>();
 
-                // Remove version parameter from all Operations
-                options.OperationFilter<RemoveVersionParameters>();
+            #region Versioning
 
-                //set version "api/v{version}/[controller]" from current swagger doc verion
-                options.DocumentFilter<SetVersionInPaths>();
+            // Remove version parameter from all Operations
+            options.OperationFilter<RemoveVersionParameters>();
 
-                options.DocInclusionPredicate((docName, apiDesc) =>
-                {
-                    if (!apiDesc.TryGetMethodInfo(out MethodInfo methodInfo)) return false;
+            //set version "api/v{version}/[controller]" from current swagger doc verion
+            options.DocumentFilter<SetVersionInPaths>();
 
-                    var versions = methodInfo.DeclaringType
-                        .GetCustomAttributes<ApiVersionAttribute>(true)
-                        .SelectMany(attr => attr.Versions);
-
-                    return versions.Any(v => $"v{v.ToString()}" == docName);
-                });
-
-                #endregion Versioning
-            });
-
-            services.AddSwaggerExamplesFromAssemblyOf(typeof(BaseDto<,>));
-        }
-
-        public static void UseSwaggerAndUI(this IApplicationBuilder app)
-        {
-            app.UseSwagger();
-
-            app.UseSwaggerUI(options =>
+            options.DocInclusionPredicate((docName, apiDesc) =>
             {
-                options.DocExpansion(DocExpansion.None);
-                options.SwaggerEndpoint("/swagger/v1/swagger.json", "TakSizeApi-v1");
-                options.SwaggerEndpoint("/swagger/v2/swagger.json", "TakSizeApi-v2");
+                if (!apiDesc.TryGetMethodInfo(out MethodInfo methodInfo)) return false;
+
+                var versions = methodInfo.DeclaringType
+                    .GetCustomAttributes<ApiVersionAttribute>(true)
+                    .SelectMany(attr => attr.Versions);
+
+                return versions.Any(v => $"v{v}" == docName);
             });
-        }
+
+            options.SchemaFilter<SwaggerIgnoreFilter>();
+            options.OperationFilter<IgnorePropertyFilter>();
+
+            #endregion Versioning
+        });
+
+        //services.AddSwaggerExamplesFromAssemblyOf(typeof(JTokenRequestExample));
+    }
+
+    public static void UseSwaggerAndUI(this IApplicationBuilder app)
+    {
+        app.UseSwagger();
+
+        app.UseSwaggerUI(options =>
+        {
+            options.DocExpansion(DocExpansion.None);
+            options.SwaggerEndpoint("/swagger/v1/swagger.json", "MS2Project-v1");
+            options.SwaggerEndpoint("/swagger/v2/swagger.json", "MS2Project-v2");
+        });
     }
 }

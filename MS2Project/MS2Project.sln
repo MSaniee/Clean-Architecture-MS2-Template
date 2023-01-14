@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.30804.86
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.33103.184
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{4B6D6C02-0A08-486F-88A3-4666C45A31A5}"
 EndProject
@@ -33,9 +33,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MS2Project.Infrastructure",
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "WebFramework", "WebFramework", "{F37070E4-AF09-4B9A-8784-00A3F54E573C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MS2Project.WebFramework", "src\MS2Project.WebFramework\MS2Project.WebFramework.csproj", "{6369A6C5-1304-4C4C-8A18-FACC29F412C4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MS2Project.WebFramework", "src\MS2Project.WebFramework\MS2Project.WebFramework.csproj", "{6369A6C5-1304-4C4C-8A18-FACC29F412C4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MS2Project.API", "src\MS2Project.API\MS2Project.API.csproj", "{FADD3E9A-130A-467B-8D2C-1CE1DD989028}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MS2Project.API", "src\MS2Project.API\MS2Project.API.csproj", "{FADD3E9A-130A-467B-8D2C-1CE1DD989028}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MS2Project.API.IntegrationTests", "MS2Project.API.IntegrationTests\MS2Project.API.IntegrationTests.csproj", "{A6FAEB76-457F-4D5E-9DF1-11BC41A8D2F2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -71,6 +73,10 @@ Global
 		{FADD3E9A-130A-467B-8D2C-1CE1DD989028}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FADD3E9A-130A-467B-8D2C-1CE1DD989028}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FADD3E9A-130A-467B-8D2C-1CE1DD989028}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A6FAEB76-457F-4D5E-9DF1-11BC41A8D2F2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A6FAEB76-457F-4D5E-9DF1-11BC41A8D2F2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A6FAEB76-457F-4D5E-9DF1-11BC41A8D2F2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A6FAEB76-457F-4D5E-9DF1-11BC41A8D2F2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -91,6 +97,7 @@ Global
 		{F37070E4-AF09-4B9A-8784-00A3F54E573C} = {4B6D6C02-0A08-486F-88A3-4666C45A31A5}
 		{6369A6C5-1304-4C4C-8A18-FACC29F412C4} = {F37070E4-AF09-4B9A-8784-00A3F54E573C}
 		{FADD3E9A-130A-467B-8D2C-1CE1DD989028} = {F8C07C2C-295B-41E3-9E40-7DF2CBC74371}
+		{A6FAEB76-457F-4D5E-9DF1-11BC41A8D2F2} = {CF9A9E1B-E9E8-4FA8-9DCC-69B924D77EC8}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {2AC3D95F-A5FD-48B3-A447-BBB12D4BD183}

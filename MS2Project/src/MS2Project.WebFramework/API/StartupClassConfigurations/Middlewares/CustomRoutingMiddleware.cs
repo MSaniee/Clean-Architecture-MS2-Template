@@ -8,12 +8,12 @@ namespace MS2Project.WebFramework.API.StartupClassConfigurations.Middlewares
         {
             app.UseEndpoints(endpoints =>
             {
-                endpoints.MapRazorPages();
+                //endpoints.MapRazorPages();
                 //endpoints.MapControllers();
                 //endpoints.MapControllerRoute(name: "default", "api/v{version:apiVersion=1}/{controller=Home}/{action=Index}/{id?}");
                 endpoints.MapControllerRoute(name: "areas", "api/v{version:apiVersion}/{area:exists}/{controller=Home}/{action=Index}/{id?}");
                 //endpoints.MapControllerRoute(name: "site", "{controller=Home}/{action=Index}/{id?}");
-                endpoints.MapRazorPages();
+                //endpoints.MapRazorPages();
             });
         }
     }

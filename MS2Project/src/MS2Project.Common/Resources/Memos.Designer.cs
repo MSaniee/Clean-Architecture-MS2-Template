@@ -19,7 +19,7 @@ namespace MS2Project.Common.Resources {
     // class via a tool like ResGen or Visual Studio.
     // To add or remove a member, edit your .ResX file then rerun ResGen
     // with the /str option, or rebuild your VS project.
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "16.0.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "17.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     public class Memos {
@@ -61,6 +61,15 @@ namespace MS2Project.Common.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to با این ایمیل کاربری پیش از این ثبت نام کرده است.
+        /// </summary>
+        public static string CustomerWithEmailAlreadyExists {
+            get {
+                return ResourceManager.GetString("CustomerWithEmailAlreadyExists", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to کدملی وارد شده صحیح نیست.
         /// </summary>
         public static string InvalidNationalIdEntered {
@@ -88,11 +97,47 @@ namespace MS2Project.Common.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to واحد های پول باید یکسان باشد.
+        /// </summary>
+        public static string MoneyCurrenciesMustBeSame {
+            get {
+                return ResourceManager.GetString("MoneyCurrenciesMustBeSame", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to واحد پول را وارد کنید.
+        /// </summary>
+        public static string MoneyMustHaveCurrency {
+            get {
+                return ResourceManager.GetString("MoneyMustHaveCurrency", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to سفارش باید حداقل یک محصول داشته باشد.
+        /// </summary>
+        public static string OrderMustHaveAtLeastOneProduct {
+            get {
+                return ResourceManager.GetString("OrderMustHaveAtLeastOneProduct", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to کاربر مورد نظر یافت نشد.
         /// </summary>
         public static string UserNotFound {
             get {
                 return ResourceManager.GetString("UserNotFound", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to در یک روز اجازه ی ثبت بیشتر از 20 سفارش را ندارید.
+        /// </summary>
+        public static string YouCannotOrderMoreThan2OrdersSameDay {
+            get {
+                return ResourceManager.GetString("YouCannotOrderMoreThan2OrdersSameDay", resourceCulture);
             }
         }
     }

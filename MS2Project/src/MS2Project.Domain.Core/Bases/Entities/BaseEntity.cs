@@ -1,11 +1,9 @@
-﻿using MS2Project.Domain.Core.Bases.Entities;
-using MS2Project.Domain.Core.Exceptions;
+﻿using MS2Project.Domain.Core.Exceptions;
 
 namespace MS2Project.Domain.Core.Bases;
 
-public abstract class BaseEntity<TKey> : IEntity
+public abstract class Entity
 {
-    public TKey Id { get; set; }
 
     private List<IDomainEvent> _domainEvents;
 
@@ -20,8 +18,8 @@ public abstract class BaseEntity<TKey> : IEntity
     /// <param name="domainEvent"></param>
     protected void AddDomainEvent(IDomainEvent domainEvent)
     {
-        _domainEvents = _domainEvents ?? new List<IDomainEvent>();
-        this._domainEvents.Add(domainEvent);
+        _domainEvents ??= new List<IDomainEvent>();
+        _domainEvents.Add(domainEvent);
     }
 
     /// <summary>
@@ -41,6 +39,13 @@ public abstract class BaseEntity<TKey> : IEntity
     }
 }
 
-public abstract class BaseEntity : BaseEntity<int>
+
+public abstract class BaseEntity : Entity, IEntity
 {
+
+}
+
+public abstract class BaseEntity<TKey> : BaseEntity
+{
+    public TKey Id { get; protected set; }
 }

@@ -4,6 +4,12 @@ namespace MS2Project.Common.StringTools
 {
     public static class StringExtensions
     {
+        public static string ToCamelCase(this string value)
+        {
+            if (string.IsNullOrEmpty(value)) return value;
+            return char.ToLowerInvariant(value[0]) + value[1..];
+        }
+
         public static bool HasValue(this string value, bool ignoreWhiteSpace = true)
         {
             return ignoreWhiteSpace ? !string.IsNullOrWhiteSpace(value) : !string.IsNullOrEmpty(value);

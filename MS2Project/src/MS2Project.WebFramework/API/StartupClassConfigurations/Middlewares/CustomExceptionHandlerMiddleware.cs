@@ -2,12 +2,13 @@
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Hosting;
+using Microsoft.Extensions.Logging;
 using Microsoft.IdentityModel.Tokens;
 using MS2Project.Domain.Core.Enums;
 using MS2Project.Domain.Core.Exceptions;
 using MS2Project.WebFramework.API.Bases;
 using Newtonsoft.Json;
-using Serilog;
+//using Serilog;
 using System;
 using System.Collections.Generic;
 using System.Net;
@@ -27,11 +28,11 @@ namespace MS2Project.WebFramework.API.StartupClassConfigurations.Middlewares
     {
         private readonly RequestDelegate _next;
         private readonly IWebHostEnvironment _env;
-        private readonly ILogger _logger;
+        private readonly ILogger<CustomExceptionHandlerMiddleware> _logger;
 
         public CustomExceptionHandlerMiddleware(RequestDelegate next,
             IWebHostEnvironment env,
-            ILogger logger)
+            ILogger<CustomExceptionHandlerMiddleware> logger)
         {
             _next = next;
             _env = env;
@@ -43,7 +44,7 @@ namespace MS2Project.WebFramework.API.StartupClassConfigurations.Middlewares
             string message = null;
             string stackTrace = null;
             HttpStatusCode httpStatusCode = HttpStatusCode.InternalServerError;
-            AppResultStatusCode apiStatusCode = AppResultStatusCode.ServerError;
+            ResultStatus apiStatusCode = ResultStatus.ServerError;
 
             try
             {
@@ -51,7 +52,8 @@ namespace MS2Project.WebFramework.API.StartupClassConfigurations.Middlewares
             }
             catch (AppException exception)
             {
-                _logger.Error(exception, exception.Message);
+                //_logger.Error(exception, exception.Message);
+                _logger.LogError(exception, exception.Message);
                 httpStatusCode = exception.HttpStatusCode;
                 apiStatusCode = exception.ApiStatusCode;
 
@@ -81,20 +83,20 @@ namespace MS2Project.WebFramework.API.StartupClassConfigurations.Middlewares
             }
             catch (SecurityTokenExpiredException exception)
             {
-                _logger.Error(exception, exception.Message);
+                _logger.LogError(exception, exception.Message);
                 SetUnAuthorizeResponse(exception);
-                apiStatusCode = AppResultStatusCode.ExpiredToken;
+                apiStatusCode = ResultStatus.ExpiredToken;
                 await WriteToResponseAsync();
             }
             catch (UnauthorizedAccessException exception)
             {
-                _logger.Error(exception, exception.Message);
+                _logger.LogError(exception, exception.Message);
                 SetUnAuthorizeResponse(exception);
                 await WriteToResponseAsync();
             }
             catch (Exception exception)
             {
-                _logger.Error(exception, exception.Message);
+                _logger.LogError(exception, exception.Message);
 
                 if (_env.IsDevelopment())
                 {
@@ -125,7 +127,7 @@ namespace MS2Project.WebFramework.API.StartupClassConfigurations.Middlewares
             void SetUnAuthorizeResponse(Exception exception)
             {
                 httpStatusCode = HttpStatusCode.Unauthorized;
-                apiStatusCode = AppResultStatusCode.UnAuthorized;
+                apiStatusCode = ResultStatus.UnAuthorized;
 
                 if (_env.IsDevelopment())
                 {

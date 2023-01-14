@@ -1,0 +1,29 @@
+﻿global using Microsoft.EntityFrameworkCore;
+global using Microsoft.EntityFrameworkCore.Metadata.Builders;
+global using Microsoft.AspNetCore.Identity;
+global using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+global using MS2Project.Common.StringTools;
+global using MS2Project.Domain.Core.Bases.Entities;
+global using MS2Project.Infrastructure.Data.SqlServer.EfCore.Tools;
+global using System;
+global using System.Linq;
+global using System.Reflection;
+global using System.Threading;
+global using System.Threading.Tasks;
+global using MS2Project.Common;
+global using MS2Project.Domain.Core.Bases;
+global using MS2Project.Domain.Core.Bases.Repositories;
+global using MS2Project.Infrastructure.Data.SqlServer.EfCore.Context;
+global using System.Collections.Generic;
+global using System.Linq.Expressions;
+global using MS2Project.Domain.Core.DILifeTimesType;
+global using MS2Project.Common.ExceptionTools;
+global using System.Data;
+global using MS2Project.Infrastructure.Data.Bases;
+global using MS2Project.Infrastructure.Data.SqlServer.Dapper.Context;
+global using Newtonsoft.Json;
+global using Dapper;
+global using Autofac;
+global using MediatR;
+
+

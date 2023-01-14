@@ -1,0 +1,13 @@
+﻿namespace MS2Project.Infrastructure.Processing.InternalCommands;
+
+public class InternalCommand : IEntity
+{
+    public Guid Id { get; set; }
+
+    public string Type { get; set; }
+
+    public string Data { get; set; }
+
+    public DateTime? ProcessedDate { get; set; }
+}
+
