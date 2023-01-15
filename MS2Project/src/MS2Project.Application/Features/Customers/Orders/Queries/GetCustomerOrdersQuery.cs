@@ -9,11 +9,11 @@ public record GetCustomerOrdersQuery(
 : IQuery<List<OrderDto>>;
 
 
-internal sealed class GetCustomerOrdersQueryHandler : IQueryHandler<GetCustomerOrdersQuery, List<OrderDto>>
+public sealed class GetCustomerOrdersQueryHandler : IQueryHandler<GetCustomerOrdersQuery, List<OrderDto>>
 {
     private readonly IReadOrderRepository _orderRepo;
 
-    internal GetCustomerOrdersQueryHandler(IReadOrderRepository orderRepo)
+    public GetCustomerOrdersQueryHandler(IReadOrderRepository orderRepo)
     {
         _orderRepo = orderRepo.ThrowIfNull();
     }

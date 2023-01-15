@@ -7,11 +7,11 @@ public record GetCustomerOrderDetailsQuery(
     Guid OrderId)
     : IQuery<OrderDetailsDto>;
 
-internal sealed class GetCustomerOrderDetailsQueryHandler : IQueryHandler<GetCustomerOrderDetailsQuery, OrderDetailsDto>
+public sealed class GetCustomerOrderDetailsQueryHandler : IQueryHandler<GetCustomerOrderDetailsQuery, OrderDetailsDto>
 {
     private readonly IReadOrderRepository _orderRepo;
 
-    internal GetCustomerOrderDetailsQueryHandler(IReadOrderRepository orderRepo)
+    public GetCustomerOrderDetailsQueryHandler(IReadOrderRepository orderRepo)
     {
         _orderRepo = orderRepo.ThrowIfNull();
     }

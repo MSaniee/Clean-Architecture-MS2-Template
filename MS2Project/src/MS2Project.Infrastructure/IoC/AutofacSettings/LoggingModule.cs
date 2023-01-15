@@ -1,5 +1,4 @@
-﻿using Autofac;
-using Serilog;
+﻿using Serilog;
 
 namespace MS2Project.Infrastructure.IoC.AutofacSettings;
 

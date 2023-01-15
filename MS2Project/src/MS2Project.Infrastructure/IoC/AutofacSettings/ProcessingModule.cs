@@ -1,6 +1,4 @@
-﻿using Autofac;
-using MediatR;
-using MS2Project.Application.Bases.Commands;
+﻿using MS2Project.Application.Bases.Commands;
 using MS2Project.Application.Bases.DomainEvents;
 using MS2Project.Application.Bases.Processing;
 using MS2Project.Application.Features.Payments.Notifications;

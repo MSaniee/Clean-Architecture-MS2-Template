@@ -27,7 +27,7 @@ public class RegisterCustomerCommandHandler : ICommandHandler<RegisterCustomerCo
 
     public async Task<SResult<CustomerDto>> Handle(RegisterCustomerCommand request, CancellationToken cancellationToken)
     {
-        Customer customer = Customer.CreateRegistered(request.Email, request.Name, this._customerUniquenessChecker);
+        Customer customer = Customer.CreateRegistered(request.Email, request.Name, _customerUniquenessChecker);
 
         await _customerRepository.AddAsync(customer, cancellationToken);
 

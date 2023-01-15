@@ -1,6 +1,9 @@
-﻿using Autofac.Core;
+﻿using Autofac;
+using Autofac.Core;
 using Autofac.Features.Variance;
 using FluentValidation;
+using MediatR.Extensions.Autofac.DependencyInjection;
+using MediatR.Extensions.Autofac.DependencyInjection.Builder;
 using MediatR.Pipeline;
 using MS2Project.Application.Bases.Validation;
 using MS2Project.Infrastructure.Processing;
@@ -16,16 +19,13 @@ public class MediatorModule : Autofac.Module
             typeof(INotificationHandler<>),
             typeof(IValidator<>)
         ));
-
-        
-
         builder.RegisterAssemblyTypes(typeof(IMediator).GetTypeInfo().Assembly).AsImplementedInterfaces();
 
         var mediatrOpenTypes = new[]
         {
             typeof(IRequestHandler<,>),
             typeof(INotificationHandler<>),
-            typeof(IValidator<>),
+            typeof(IValidator<>)
         };
 
         foreach (var mediatrOpenType in mediatrOpenTypes)

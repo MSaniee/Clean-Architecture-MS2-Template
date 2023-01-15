@@ -15,7 +15,7 @@ public record ChangeCustomerOrderCommand(
     : CommandBase<Unit>;
 
 
-internal sealed class ChangeCustomerOrderCommandHandler : ICommandHandler<ChangeCustomerOrderCommand, Unit>
+public sealed class ChangeCustomerOrderCommandHandler : ICommandHandler<ChangeCustomerOrderCommand, Unit>
 {
     private readonly ICustomerRepository _customerRepository;
 
@@ -23,7 +23,7 @@ internal sealed class ChangeCustomerOrderCommandHandler : ICommandHandler<Change
 
     private readonly IReadProductRepository _readProductRepo;
 
-    internal ChangeCustomerOrderCommandHandler(
+    public ChangeCustomerOrderCommandHandler(
         ICustomerRepository customerRepository,
         IForeignExchange foreignExchange,
         IReadProductRepository readProductRepo)

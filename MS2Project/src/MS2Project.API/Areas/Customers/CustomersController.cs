@@ -32,16 +32,5 @@ public class CustomersController : BaseController
                new RegisterCustomerCommand(dto.Email, dto.Name),
                cancellationToken);
     }
-
-    /// <summary>
-    /// برای تست
-    /// </summary>
-    /// <param name="cancellationToken"></param>
-    /// <returns></returns>
-    [HttpPost]
-    public async Task<ApiResult> TestWebservice(CancellationToken cancellationToken)
-    {
-        return Ok();
-    }
 }
 
