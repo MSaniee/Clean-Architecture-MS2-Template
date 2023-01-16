@@ -1,6 +1,5 @@
 ﻿using MS2Project.Domain.UserAggregate;
 using MS2Project.Domain.UserAggregate.Roles;
-using MS2Project.Infrastructure.Processing.Outbox;
 
 namespace MS2Project.Infrastructure.Data.SqlServer.EfCore.Context;
 
@@ -13,7 +12,6 @@ public class ApplicationDbContext : IdentityDbContext<User, Role, Guid, Identity
     {
     }
 
-    public DbSet<OutboxMessage> OutboxMessages { get; set; }
 
     protected override void OnModelCreating(ModelBuilder builder)
     {

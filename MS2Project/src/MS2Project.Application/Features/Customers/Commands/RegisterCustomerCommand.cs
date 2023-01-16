@@ -29,7 +29,7 @@ public class RegisterCustomerCommandHandler : ICommandHandler<RegisterCustomerCo
     {
         Customer customer = Customer.CreateRegistered(request.Email, request.Name, _customerUniquenessChecker);
 
-        await _customerRepository.AddAsync(customer, cancellationToken);
+        await _customerRepository.AddAsync(customer, cancellationToken, false);
 
         await _unitOfWork.CommitAsync(cancellationToken);
 

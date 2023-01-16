@@ -14,15 +14,15 @@ public class CommandsScheduler : ICommandsScheduler, IScopedDependency
 
     public async Task EnqueueAsync<T>(ICommand<T> command)
     {
-        const string sqlInsert = "INSERT INTO [app].[InternalCommands] ([Id], [EnqueueDate] , [Type], [Data]) VALUES " +
-                                 "(@Id, @EnqueueDate, @Type, @Data)";
+        //const string sqlInsert = "INSERT INTO [app].[InternalCommands] ([Id], [EnqueueDate] , [Type], [Data]) VALUES " +
+        //                         "(@Id, @EnqueueDate, @Type, @Data)";
 
-        await _dbContext.Connection.ExecuteAsync(sqlInsert, new
-        {
-            command.Id,
-            EnqueueDate = DateTime.UtcNow,
-            Type = command.GetType().FullName,
-            Data = JsonConvert.SerializeObject(command)
-        });
+        //await _dbContext.Connection.ExecuteAsync(sqlInsert, new
+        //{
+        //    command.Id,
+        //    EnqueueDate = DateTime.UtcNow,
+        //    Type = command.GetType().FullName,
+        //    Data = JsonConvert.SerializeObject(command)
+        //});
     }
 }

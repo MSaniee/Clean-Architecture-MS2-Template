@@ -12,7 +12,11 @@
 
   <ItemGroup>
     <Folder Include="Bus\RabbitMQ\" />
+    <Folder Include="Caching\" />
     <Folder Include="Data\MongoDb\" />
+    <Folder Include="Data\ReadRepositories\Customers\Orders\" />
+    <Folder Include="Domain\SharedKernel\" />
+    <Folder Include="Logging\" />
   </ItemGroup>
 
   <ItemGroup>

@@ -1,6 +1,4 @@
-﻿using MediatR;
-
-namespace MS2Project.Infrastructure.Processing;
+﻿namespace MS2Project.Infrastructure.Processing;
 
 public class DomainEventsDispatcherNotificationHandlerDecorator<T> : INotificationHandler<T> where T : INotification
 {

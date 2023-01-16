@@ -16,8 +16,8 @@ public class ReadCustomerRepository : IReadCustomerRepository, IScopedDependency
     public  bool ExistsCustomer(string customerEmail)
     {
         const string sql = "SELECT TOP 1 1" +
-                           "FROM [orders].[Customers] AS [Customer] " +
-                           "WHERE [Customer].[Email] = @Email";
+                           "FROM [Customers]" +
+                           "WHERE [Customers].[Email] = @Email";
 
         CommandDefinition commandDefinition = new(
             sql,

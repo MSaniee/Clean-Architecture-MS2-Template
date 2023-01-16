@@ -2,45 +2,42 @@
 using Microsoft.Extensions.DependencyInjection;
 using MS2Project.Application.Mapping;
 using MS2Project.Application.Mapping.Profiles;
-using System;
-using System.Linq;
-using System.Reflection;
 
-namespace MS2Project.WebFramework.API.StartupClassConfigurations.AutoMapper
+namespace MS2Project.WebFramework.API.StartupClassConfigurations.AutoMapper;
+
+public static class AutoMapperConfiguration
 {
-    public static class AutoMapperConfiguration
+    public static void InitializeAutoMapper(this IServiceCollection services, params Assembly[] assemblies)
     {
-        public static void InitializeAutoMapper(this IServiceCollection services, params Assembly[] assemblies)
+        services.AddAutoMapper(config =>
         {
-            services.AddAutoMapper(config =>
+            config.AddCustomMappingProfile();
+            config.Advanced.BeforeSeal(configProvicer =>
             {
-                config.AddCustomMappingProfile();
-                config.Advanced.BeforeSeal(configProvicer =>
-                {
-                    configProvicer.CompileMappings();
-                });
-            }, assemblies);
-        }
+                configProvicer.CompileMappings();
+            });
+        }, assemblies);
+    }
 
-        public static void AddCustomMappingProfile(this IMapperConfigurationExpression config)
-        {
-            var servicesAssembly = typeof(IHaveCustomMapping).Assembly;
+    public static void AddCustomMappingProfile(this IMapperConfigurationExpression config)
+    {
+        var servicesAssembly = typeof(IHaveCustomMapping).Assembly;
 
-            //این اسمبلی اشاره می کند به لایه اجرایی Assembly.GetEntryAssembly()
-            config.AddCustomMappingProfile(Assembly.GetEntryAssembly(), servicesAssembly);
-        }
+        //این اسمبلی اشاره می کند به لایه اجرایی Assembly.GetEntryAssembly()
+        config.AddCustomMappingProfile(Assembly.GetEntryAssembly(), servicesAssembly);
+    }
 
-        public static void AddCustomMappingProfile(this IMapperConfigurationExpression config, params Assembly[] assemblies)
-        {
-            var allTypes = assemblies.SelectMany(a => a.ExportedTypes);
+    public static void AddCustomMappingProfile(this IMapperConfigurationExpression config, params Assembly[] assemblies)
+    {
+        var allTypes = assemblies.SelectMany(a => a.ExportedTypes);
 
-            var list = allTypes.Where(type => type.IsClass && !type.IsAbstract &&
-                type.GetInterfaces().Contains(typeof(IHaveCustomMapping)))
-                .Select(type => (IHaveCustomMapping)Activator.CreateInstance(type));
+        var list = allTypes.Where(type => type.IsClass && !type.IsAbstract &&
+            type.GetInterfaces().Contains(typeof(IHaveCustomMapping)))
+            .Select(type => (IHaveCustomMapping)Activator.CreateInstance(type));
 
-            var profile = new CustomMappingProfile(list);
+        var profile = new CustomMappingProfile(list);
 
-            config.AddProfile(profile);
-        }
+        config.AddProfile(profile);
     }
 }
+

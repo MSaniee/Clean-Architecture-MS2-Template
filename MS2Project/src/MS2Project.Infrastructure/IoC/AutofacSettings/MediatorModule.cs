@@ -1,9 +1,6 @@
-﻿using Autofac;
-using Autofac.Core;
+﻿using Autofac.Core;
 using Autofac.Features.Variance;
 using FluentValidation;
-using MediatR.Extensions.Autofac.DependencyInjection;
-using MediatR.Extensions.Autofac.DependencyInjection.Builder;
 using MediatR.Pipeline;
 using MS2Project.Application.Bases.Validation;
 using MS2Project.Infrastructure.Processing;

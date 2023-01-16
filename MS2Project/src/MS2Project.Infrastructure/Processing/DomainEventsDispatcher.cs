@@ -1,9 +1,5 @@
-﻿using Autofac;
-using Autofac.Core;
-using MediatR;
+﻿using Autofac.Core;
 using MS2Project.Application.Bases.DomainEvents;
-using MS2Project.Infrastructure.Processing.Outbox;
-using Newtonsoft.Json;
 
 namespace MS2Project.Infrastructure.Processing;
 
@@ -52,23 +48,12 @@ public class DomainEventsDispatcher : IDomainEventsDispatcher, IScopedDependency
         domainEntities
             .ForEach(entity => entity.Entity.ClearDomainEvents());
 
-        var tasks = domainEvents
+        var tasks = domainEventNotifications
             .Select(async (domainEvent) =>
             {
                 await _mediator.Publish(domainEvent);
             });
 
         await Task.WhenAll(tasks);
-
-        foreach (var domainEventNotification in domainEventNotifications)
-        {
-            string type = domainEventNotification.GetType().FullName;
-            var data = JsonConvert.SerializeObject(domainEventNotification);
-            OutboxMessage outboxMessage = new(
-                domainEventNotification.DomainEvent.OccurredOn,
-                type,
-                data);
-            _context.OutboxMessages.Add(outboxMessage);
-        }
     }
 }

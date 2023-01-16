@@ -1,12 +1,12 @@
-﻿namespace MS2Project.Domain.Core.Settings.Mongo
-{
-    public interface IMongoDbSettings
-    {
-        string ConnectionString { get; set; }
-        string DatabaseName { get; set; }
-        string CollectionName { get; set; }
+﻿namespace MS2Project.Domain.Core.Settings.Mongo;
 
-        string PersonnelLogsDatabaseName { get; set; }
-        string PersonnelLogsCollectionName { get; set; }
-    }
+public interface IMongoDbSettings
+{
+    string ConnectionString { get; set; }
+    string DatabaseName { get; set; }
+    string CollectionName { get; set; }
+
+    string PersonnelLogsDatabaseName { get; set; }
+    string PersonnelLogsCollectionName { get; set; }
 }
+
