@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace MS2Project.Common.Money
+namespace $ext_safeprojectname$.Common.Money
 {
     public static class SeparationMoney
     {

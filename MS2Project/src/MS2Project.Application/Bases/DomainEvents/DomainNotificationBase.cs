@@ -1,4 +1,4 @@
-﻿namespace MS2Project.Application.Bases.DomainEvents;
+﻿namespace $ext_safeprojectname$.Application.Bases.DomainEvents;
 
 public class DomainNotificationBase<T> : IDomainEventNotification<T> where T : IDomainEvent
 {

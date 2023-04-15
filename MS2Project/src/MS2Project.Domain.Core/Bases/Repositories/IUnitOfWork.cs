@@ -1,4 +1,4 @@
-﻿namespace MS2Project.Domain.Core.Bases.Repositories;
+﻿namespace $ext_safeprojectname$.Domain.Core.Bases.Repositories;
 
 public interface IUnitOfWork
 {

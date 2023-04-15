@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace MS2Project.Common.ExceptionTools;
+namespace $ext_safeprojectname$.Common.ExceptionTools;
 
 public static class CheckNullArgument
 {

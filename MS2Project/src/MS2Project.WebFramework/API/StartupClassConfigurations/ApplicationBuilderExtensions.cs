@@ -2,10 +2,10 @@
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using MS2Project.Application.Interfaces.DataInitializer;
-using MS2Project.Common;
+using $ext_safeprojectname$.Application.Interfaces.DataInitializer;
+using $ext_safeprojectname$.Common;
 
-namespace MS2Project.WebFramework.API.StartupClassConfigurations
+namespace $ext_safeprojectname$.WebFramework.API.StartupClassConfigurations
 {
     public static class ApplicationBuilderExtensions
     {

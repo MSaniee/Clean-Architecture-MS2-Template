@@ -30,7 +30,7 @@
   </ItemGroup>
 
   <ItemGroup>
-	  <ProjectReference Include="..\src\MS2Project.API\MS2Project.API.csproj" />
+	  <ProjectReference Include="..\src\$ext_safeprojectname$.API\$ext_safeprojectname$.API.csproj" />
   </ItemGroup>
 
 </Project>

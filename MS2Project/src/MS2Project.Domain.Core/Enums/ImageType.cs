@@ -1,4 +1,4 @@
-﻿namespace MS2Project.Domain.Enums;
+﻿namespace $ext_safeprojectname$.Domain.Enums;
 
 public enum ImageType
 {

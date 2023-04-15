@@ -1,7 +1,7 @@
 ﻿using Xunit.Abstractions;
 using Xunit.Sdk;
 
-namespace MS2Project.API.IntegrationTests;
+namespace $ext_safeprojectname$.API.IntegrationTests;
 
 public class AlphabeticalOrderer : ITestCaseOrderer
 {

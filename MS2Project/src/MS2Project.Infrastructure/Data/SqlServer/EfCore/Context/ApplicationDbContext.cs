@@ -1,7 +1,7 @@
-﻿using MS2Project.Domain.UserAggregate;
-using MS2Project.Domain.UserAggregate.Roles;
+﻿using $ext_safeprojectname$.Domain.UserAggregate;
+using $ext_safeprojectname$.Domain.UserAggregate.Roles;
 
-namespace MS2Project.Infrastructure.Data.SqlServer.EfCore.Context;
+namespace $ext_safeprojectname$.Infrastructure.Data.SqlServer.EfCore.Context;
 
 public class ApplicationDbContext : IdentityDbContext<User, Role, Guid, IdentityUserClaim<Guid>,
     UserRole, IdentityUserLogin<Guid>,

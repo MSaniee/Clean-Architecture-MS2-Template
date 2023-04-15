@@ -1,8 +1,8 @@
-﻿using MS2Project.Application.Dtos.Customers;
-using MS2Project.Application.Features.Customers.Commands;
+﻿using $ext_safeprojectname$.Application.Dtos.Customers;
+using $ext_safeprojectname$.Application.Features.Customers.Commands;
 
 
-namespace MS2Project.API.Areas.Customers;
+namespace $ext_safeprojectname$.API.Areas.Customers;
 
 [Area("Customers")]
 [ApiVersion("1")]

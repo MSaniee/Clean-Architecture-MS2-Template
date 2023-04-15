@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace MS2Project.Common.Resources {
+namespace $ext_safeprojectname$.Common.Resources {
     using System;
     
     
@@ -39,7 +39,7 @@ namespace MS2Project.Common.Resources {
         public static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("MS2Project.Common.Resources.Memos", typeof(Memos).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("$ext_safeprojectname$.Common.Resources.Memos", typeof(Memos).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;

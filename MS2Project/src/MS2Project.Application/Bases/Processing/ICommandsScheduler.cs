@@ -1,4 +1,4 @@
-﻿namespace MS2Project.Application.Bases.Processing;
+﻿namespace $ext_safeprojectname$.Application.Bases.Processing;
 
 public interface ICommandsScheduler
 {

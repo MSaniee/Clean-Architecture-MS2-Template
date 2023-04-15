@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Globalization;
 using System.Linq;
 
-namespace MS2Project.Common.PersianDate
+namespace $ext_safeprojectname$.Common.PersianDate
 {
     public static class PersianDate
     {

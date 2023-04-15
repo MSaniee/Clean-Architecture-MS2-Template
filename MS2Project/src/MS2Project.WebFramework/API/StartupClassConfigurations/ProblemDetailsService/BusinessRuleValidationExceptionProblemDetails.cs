@@ -1,8 +1,8 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using MS2Project.Domain.Core.Exceptions;
+using $ext_safeprojectname$.Domain.Core.Exceptions;
 
-namespace MS2Project.WebFramework.API.StartupClassConfigurations.ProblemDetailsService;
+namespace $ext_safeprojectname$.WebFramework.API.StartupClassConfigurations.ProblemDetailsService;
 
 public class BusinessRuleValidationExceptionProblemDetails : ProblemDetails
 {

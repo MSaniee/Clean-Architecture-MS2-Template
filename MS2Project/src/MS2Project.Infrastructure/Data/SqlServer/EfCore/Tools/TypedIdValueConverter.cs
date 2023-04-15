@@ -1,6 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
-namespace MS2Project.Infrastructure.Data.SqlServer.EfCore.Tools;
+namespace $ext_safeprojectname$.Infrastructure.Data.SqlServer.EfCore.Tools;
 
 public class TypedIdValueConverter<TTypedIdValue> : ValueConverter<TTypedIdValue, Guid>
         where TTypedIdValue : TypedIdValueBase

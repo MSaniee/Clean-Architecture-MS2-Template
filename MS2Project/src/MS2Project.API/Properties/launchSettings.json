@@ -17,7 +17,7 @@
         "ASPNETCORE_ENVIRONMENT": "Development"
       }
     },
-    "MS2Project.API": {
+    "$ext_safeprojectname$.API": {
       "commandName": "Project",
       "launchBrowser": true,
       "launchUrl": "swagger",

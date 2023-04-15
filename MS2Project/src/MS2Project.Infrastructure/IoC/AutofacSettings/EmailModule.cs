@@ -1,7 +1,7 @@
 ﻿using Autofac;
-using MS2Project.Application.Services.Emails;
+using $ext_safeprojectname$.Application.Services.Emails;
 
-namespace MS2Project.Infrastructure.IoC.AutofacSettings;
+namespace $ext_safeprojectname$.Infrastructure.IoC.AutofacSettings;
 
 public class EmailModule : Autofac.Module
 {

@@ -1,6 +1,6 @@
-﻿using MS2Project.Domain.Core.Bases.Entities;
+﻿using $ext_safeprojectname$.Domain.Core.Bases.Entities;
 
-namespace MS2Project.Domain.Core.Exceptions;
+namespace $ext_safeprojectname$.Domain.Core.Exceptions;
 
 public class BusinessRuleValidationException : Exception
 {

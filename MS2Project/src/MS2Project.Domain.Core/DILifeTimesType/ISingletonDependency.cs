@@ -1,4 +1,4 @@
-﻿namespace MS2Project.Domain.Core.DILifeTimesType;
+﻿namespace $ext_safeprojectname$.Domain.Core.DILifeTimesType;
 
 public interface ISingletonDependency
 {

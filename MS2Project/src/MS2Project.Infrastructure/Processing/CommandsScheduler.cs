@@ -1,7 +1,7 @@
-﻿using MS2Project.Application.Bases.Commands;
-using MS2Project.Application.Bases.Processing;
+﻿using $ext_safeprojectname$.Application.Bases.Commands;
+using $ext_safeprojectname$.Application.Bases.Processing;
 
-namespace MS2Project.Infrastructure.Processing;
+namespace $ext_safeprojectname$.Infrastructure.Processing;
 
 public class CommandsScheduler : ICommandsScheduler, IScopedDependency
 {

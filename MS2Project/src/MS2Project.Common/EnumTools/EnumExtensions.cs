@@ -4,7 +4,7 @@ using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Reflection;
 
-namespace MS2Project.Common.EnumTools
+namespace $ext_safeprojectname$.Common.EnumTools
 {
     public static class EnumExtensions
     {

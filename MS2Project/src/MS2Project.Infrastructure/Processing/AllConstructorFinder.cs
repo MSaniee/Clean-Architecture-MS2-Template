@@ -1,7 +1,7 @@
 ﻿using Autofac.Core.Activators.Reflection;
 using System.Collections.Concurrent;
 
-namespace MS2Project.Infrastructure.Processing;
+namespace $ext_safeprojectname$.Infrastructure.Processing;
 
 internal class AllConstructorFinder : IConstructorFinder
 {

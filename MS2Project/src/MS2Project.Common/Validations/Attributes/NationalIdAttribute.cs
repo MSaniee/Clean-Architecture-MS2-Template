@@ -1,10 +1,10 @@
-﻿using MS2Project.Common.Resources;
+﻿using $ext_safeprojectname$.Common.Resources;
 using System;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text.RegularExpressions;
 
-namespace MS2Project.Common.Validations.Attributes
+namespace $ext_safeprojectname$.Common.Validations.Attributes
 {
     public class NationalIdAttribute : ValidationAttribute
     {

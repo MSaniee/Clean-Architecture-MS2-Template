@@ -1,6 +1,6 @@
-﻿using MS2Project.Domain.Core.Exceptions;
+﻿using $ext_safeprojectname$.Domain.Core.Exceptions;
 
-namespace MS2Project.Domain.Core.Bases;
+namespace $ext_safeprojectname$.Domain.Core.Bases;
 
 public abstract class Entity
 {

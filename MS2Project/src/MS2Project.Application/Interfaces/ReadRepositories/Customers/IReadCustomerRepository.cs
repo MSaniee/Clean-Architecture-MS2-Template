@@ -1,4 +1,4 @@
-﻿namespace MS2Project.Application.Interfaces.ReadRepositories.Customers;
+﻿namespace $ext_safeprojectname$.Application.Interfaces.ReadRepositories.Customers;
 
 public interface IReadCustomerRepository
 {

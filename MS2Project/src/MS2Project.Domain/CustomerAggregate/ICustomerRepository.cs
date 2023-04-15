@@ -1,6 +1,6 @@
 ﻿
 
-namespace MS2Project.Domain.CustomerAggregate;
+namespace $ext_safeprojectname$.Domain.CustomerAggregate;
 
 public interface ICustomerRepository : IRepository<Customer>
 {

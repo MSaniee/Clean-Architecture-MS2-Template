@@ -1,6 +1,6 @@
-﻿using MS2Project.Common.EnumTools;
-using MS2Project.Domain.Core.Enums;
-using MS2Project.Domain.Enums;
+﻿using $ext_safeprojectname$.Common.EnumTools;
+using $ext_safeprojectname$.Domain.Core.Enums;
+using $ext_safeprojectname$.Domain.Enums;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
@@ -8,7 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MS2Project.WebFramework.API.Bases
+namespace $ext_safeprojectname$.WebFramework.API.Bases
 {
     public class ApiExceptionResult
     {

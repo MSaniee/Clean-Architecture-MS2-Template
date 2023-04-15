@@ -3,7 +3,7 @@
   <PropertyGroup>
     <TargetFramework>net7.0</TargetFramework>
     <GenerateDocumentationFile>True</GenerateDocumentationFile>
-    <DocumentationFile>C:\Users\Mohsen\source\repos\Clean-Architecture-MS2-Template\MS2Project\src\MS2Project.API\obj\Debug\net6.0\MS2Project.API.xml</DocumentationFile>
+    <DocumentationFile>C:\Users\Mohsen\source\repos\Clean-Architecture-MS2-Template\$ext_safeprojectname$\src\$ext_safeprojectname$.API\obj\Debug\net6.0\$ext_safeprojectname$.API.xml</DocumentationFile>
   </PropertyGroup>
 
   <ItemGroup>
@@ -20,11 +20,11 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\MS2Project.Application\MS2Project.Application.csproj" />
-    <ProjectReference Include="..\MS2Project.Common\MS2Project.Common.csproj" />
-    <ProjectReference Include="..\MS2Project.Infrastructure\MS2Project.Infrastructure.csproj" />
-    <ProjectReference Include="..\MS2Project.WebFramework\MS2Project.WebFramework.csproj" />
-    <!--<InternalsVisibleTo Include ="MS2Project.API.IntegrationTests"/>-->
+    <ProjectReference Include="..\$ext_safeprojectname$.Application\$ext_safeprojectname$.Application.csproj" />
+    <ProjectReference Include="..\$ext_safeprojectname$.Common\$ext_safeprojectname$.Common.csproj" />
+    <ProjectReference Include="..\$ext_safeprojectname$.Infrastructure\$ext_safeprojectname$.Infrastructure.csproj" />
+    <ProjectReference Include="..\$ext_safeprojectname$.WebFramework\$ext_safeprojectname$.WebFramework.csproj" />
+    <!--<InternalsVisibleTo Include ="$ext_safeprojectname$.API.IntegrationTests"/>-->
   </ItemGroup>
 
 </Project>

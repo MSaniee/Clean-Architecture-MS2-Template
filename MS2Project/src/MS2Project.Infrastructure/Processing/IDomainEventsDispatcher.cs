@@ -1,4 +1,4 @@
-﻿namespace MS2Project.Infrastructure.Processing;
+﻿namespace $ext_safeprojectname$.Infrastructure.Processing;
 
 public interface IDomainEventsDispatcher
 {

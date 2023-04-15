@@ -1,4 +1,4 @@
-﻿namespace MS2Project.Application.Services.Emails;
+﻿namespace $ext_safeprojectname$.Application.Services.Emails;
 
 public struct EmailMessage
 {

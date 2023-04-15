@@ -1,4 +1,4 @@
-﻿namespace MS2Project.Application.Configurations;
+﻿namespace $ext_safeprojectname$.Application.Configurations;
 
 public interface IExecutionContextAccessor
 {

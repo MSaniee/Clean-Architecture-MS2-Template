@@ -1,4 +1,4 @@
-﻿namespace MS2Project.Application.Dtos.Customers;
+﻿namespace $ext_safeprojectname$.Application.Dtos.Customers;
 
 public class RegisterCustomerDto
 {

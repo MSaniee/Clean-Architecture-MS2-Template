@@ -2,12 +2,12 @@
 using Autofac.Extras.CommonServiceLocator;
 using CommonServiceLocator;
 using Microsoft.Extensions.DependencyInjection;
-using MS2Project.Application.Configurations;
-using MS2Project.Application.Services.Emails;
-using MS2Project.Infrastructure.IoC.AutofacSettings;
+using $ext_safeprojectname$.Application.Configurations;
+using $ext_safeprojectname$.Application.Services.Emails;
+using $ext_safeprojectname$.Infrastructure.IoC.AutofacSettings;
 using Serilog;
 
-namespace MS2Project.Infrastructure;
+namespace $ext_safeprojectname$.Infrastructure;
 
 public class ApplicationStartup
 {

@@ -2,12 +2,12 @@
 using Autofac.Extensions.DependencyInjection;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Hosting;
-using MS2Project.Application.Services.Emails;
-using MS2Project.Infrastructure.IoC.AutofacSettings;
+using $ext_safeprojectname$.Application.Services.Emails;
+using $ext_safeprojectname$.Infrastructure.IoC.AutofacSettings;
 using Serilog;
 using Serilog.Formatting.Compact;
 
-namespace MS2Project.WebFramework.API.StartupClassConfigurations.Autufac;
+namespace $ext_safeprojectname$.WebFramework.API.StartupClassConfigurations.Autufac;
 
 public static class AutofacConfiguration
 {

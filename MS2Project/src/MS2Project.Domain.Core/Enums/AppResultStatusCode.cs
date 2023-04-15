@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace MS2Project.Domain.Core.Enums;
+namespace $ext_safeprojectname$.Domain.Core.Enums;
 
 public enum ResultStatus
 {

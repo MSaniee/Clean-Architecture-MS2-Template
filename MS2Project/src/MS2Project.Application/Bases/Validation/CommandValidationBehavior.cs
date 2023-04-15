@@ -1,7 +1,7 @@
 ﻿using FluentValidation;
-using MS2Project.Domain.Core.Exceptions;
+using $ext_safeprojectname$.Domain.Core.Exceptions;
 
-namespace MS2Project.Application.Bases.Validation;
+namespace $ext_safeprojectname$.Application.Bases.Validation;
 
 public class CommandValidationBehavior<TRequest, TResponse> : IPipelineBehavior<TRequest, TResponse> where TRequest : IRequest<TResponse>
 {

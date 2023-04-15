@@ -1,4 +1,4 @@
-﻿namespace MS2Project.Domain.UserAggregate.Roles;
+﻿namespace $ext_safeprojectname$.Domain.UserAggregate.Roles;
 
 public class UserRole : IdentityUserRole<Guid>, IEntity
 {

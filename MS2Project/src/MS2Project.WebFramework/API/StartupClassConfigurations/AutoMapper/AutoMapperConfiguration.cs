@@ -1,9 +1,9 @@
 ﻿using AutoMapper;
 using Microsoft.Extensions.DependencyInjection;
-using MS2Project.Application.Mapping;
-using MS2Project.Application.Mapping.Profiles;
+using $ext_safeprojectname$.Application.Mapping;
+using $ext_safeprojectname$.Application.Mapping.Profiles;
 
-namespace MS2Project.WebFramework.API.StartupClassConfigurations.AutoMapper;
+namespace $ext_safeprojectname$.WebFramework.API.StartupClassConfigurations.AutoMapper;
 
 public static class AutoMapperConfiguration
 {

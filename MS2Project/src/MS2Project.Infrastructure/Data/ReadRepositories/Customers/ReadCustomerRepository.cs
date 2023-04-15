@@ -1,8 +1,8 @@
 ﻿using Dapper;
-using MS2Project.Application.Interfaces.ReadRepositories.Customers;
-using MS2Project.Infrastructure.Data.SqlServer.Dapper.Context;
+using $ext_safeprojectname$.Application.Interfaces.ReadRepositories.Customers;
+using $ext_safeprojectname$.Infrastructure.Data.SqlServer.Dapper.Context;
 
-namespace MS2Project.Infrastructure.Data.ReadRepositories.Customers;
+namespace $ext_safeprojectname$.Infrastructure.Data.ReadRepositories.Customers;
 
 public class ReadCustomerRepository : IReadCustomerRepository, IScopedDependency
 {

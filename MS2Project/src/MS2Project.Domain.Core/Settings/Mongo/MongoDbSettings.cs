@@ -1,4 +1,4 @@
-﻿namespace MS2Project.Domain.Core.Settings.Mongo
+﻿namespace $ext_safeprojectname$.Domain.Core.Settings.Mongo
 {
     public class MongoDbSettings : IMongoDbSettings
     {

@@ -1,4 +1,4 @@
-﻿namespace MS2Project.Domain.Core.Settings.Site
+﻿namespace $ext_safeprojectname$.Domain.Core.Settings.Site
 {
     public class SiteSettings
     {

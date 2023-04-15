@@ -1,6 +1,6 @@
-﻿using MS2Project.Application.Dtos;
+﻿using $ext_safeprojectname$.Application.Dtos;
 
-namespace MS2Project.Infrastructure.Processing;
+namespace $ext_safeprojectname$.Infrastructure.Processing;
 
 internal static class Assemblies
 {

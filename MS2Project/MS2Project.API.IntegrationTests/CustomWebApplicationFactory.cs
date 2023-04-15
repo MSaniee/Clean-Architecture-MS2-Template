@@ -6,11 +6,11 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using MS2Project.Infrastructure.Data.SqlServer.EfCore.Context;
-using MS2Project.Infrastructure.Data.SqlServer.EfCore.Tools;
+using $ext_safeprojectname$.Infrastructure.Data.SqlServer.EfCore.Context;
+using $ext_safeprojectname$.Infrastructure.Data.SqlServer.EfCore.Tools;
 using SqlInMemory;
 
-namespace MS2Project.API.IntegrationTests;
+namespace $ext_safeprojectname$.API.IntegrationTests;
 
 public class CustomWebApplicationFactory<TProgram> : WebApplicationFactory<TProgram>, IDisposable
        where TProgram : class

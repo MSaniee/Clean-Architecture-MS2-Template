@@ -3,14 +3,14 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.IdentityModel.Tokens;
-using MS2Project.Domain.Core.Enums;
-using MS2Project.Domain.Core.Exceptions;
-using MS2Project.WebFramework.API.Bases;
+using $ext_safeprojectname$.Domain.Core.Enums;
+using $ext_safeprojectname$.Domain.Core.Exceptions;
+using $ext_safeprojectname$.WebFramework.API.Bases;
 using Newtonsoft.Json;
 //using Serilog;
 using System.Net;
 
-namespace MS2Project.WebFramework.API.StartupClassConfigurations.Middlewares;
+namespace $ext_safeprojectname$.WebFramework.API.StartupClassConfigurations.Middlewares;
 public static class CustomExceptionHandlerMiddlewareExtensions
 {
     public static IApplicationBuilder UseCustomExceptionHandler(this IApplicationBuilder builder)

@@ -1,4 +1,4 @@
-﻿namespace MS2Project.Common.TestItems
+﻿namespace $ext_safeprojectname$.Common.TestItems
 {
     public class TestItem
     {

@@ -1,6 +1,6 @@
-﻿using MS2Project.Infrastructure.Processing;
+﻿using $ext_safeprojectname$.Infrastructure.Processing;
 
-namespace MS2Project.Infrastructure.Data.Bases;
+namespace $ext_safeprojectname$.Infrastructure.Data.Bases;
 
 public class UnitOfWork : IUnitOfWork, IScopedDependency
 {

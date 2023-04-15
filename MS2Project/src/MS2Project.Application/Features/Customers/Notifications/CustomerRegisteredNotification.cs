@@ -1,10 +1,10 @@
-﻿using MS2Project.Application.Bases.DomainEvents;
-using MS2Project.Application.Bases.Processing;
-using MS2Project.Application.Features.Customers.Commands;
-using MS2Project.Domain.CustomerAggregate;
-using MS2Project.Domain.CustomerAggregate.Events;
+﻿using $ext_safeprojectname$.Application.Bases.DomainEvents;
+using $ext_safeprojectname$.Application.Bases.Processing;
+using $ext_safeprojectname$.Application.Features.Customers.Commands;
+using $ext_safeprojectname$.Domain.CustomerAggregate;
+using $ext_safeprojectname$.Domain.CustomerAggregate.Events;
 
-namespace MS2Project.Application.Features.Customers.Notifications;
+namespace $ext_safeprojectname$.Application.Features.Customers.Notifications;
 
 public class CustomerRegisteredNotification : DomainNotificationBase<CustomerRegisteredEvent>
 {

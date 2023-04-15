@@ -1,9 +1,9 @@
 ﻿using Microsoft.OpenApi.Models;
-using MS2Project.Common.SwaggerTools;
+using $ext_safeprojectname$.Common.SwaggerTools;
 using Newtonsoft.Json;
 using Swashbuckle.AspNetCore.SwaggerGen;
 
-namespace MS2Project.WebFramework.API.StartupClassConfigurations.Swagger;
+namespace $ext_safeprojectname$.WebFramework.API.StartupClassConfigurations.Swagger;
 
 public class SwaggerIgnoreFilter : ISchemaFilter
 {

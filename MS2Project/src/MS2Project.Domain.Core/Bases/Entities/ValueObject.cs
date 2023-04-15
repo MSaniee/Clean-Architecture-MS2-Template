@@ -1,7 +1,7 @@
-﻿using MS2Project.Domain.Core.Bases.Attributes;
-using MS2Project.Domain.Core.Exceptions;
+﻿using $ext_safeprojectname$.Domain.Core.Bases.Attributes;
+using $ext_safeprojectname$.Domain.Core.Exceptions;
 
-namespace MS2Project.Domain.Core.Bases.Entities;
+namespace $ext_safeprojectname$.Domain.Core.Bases.Entities;
 
 public abstract class ValueObject : IEquatable<ValueObject>
 {

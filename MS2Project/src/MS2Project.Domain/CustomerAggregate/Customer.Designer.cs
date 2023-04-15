@@ -1,7 +1,7 @@
-﻿using MS2Project.Domain.CustomerAggregate.Events;
-using MS2Project.Domain.CustomerAggregate.Rules;
+﻿using $ext_safeprojectname$.Domain.CustomerAggregate.Events;
+using $ext_safeprojectname$.Domain.CustomerAggregate.Rules;
 
-namespace MS2Project.Domain.CustomerAggregate;
+namespace $ext_safeprojectname$.Domain.CustomerAggregate;
 
 public partial class Customer
 {

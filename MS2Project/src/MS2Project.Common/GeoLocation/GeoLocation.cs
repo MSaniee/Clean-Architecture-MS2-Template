@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace MS2Project.Common.GeoLocation
+namespace $ext_safeprojectname$.Common.GeoLocation
 {
     public static class GeoLocation
     {

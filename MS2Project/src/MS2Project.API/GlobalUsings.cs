@@ -2,12 +2,12 @@
 global using Microsoft.AspNetCore.Hosting;
 global using Microsoft.Extensions.DependencyInjection;
 global using Microsoft.Extensions.Hosting;
-global using MS2Project.WebFramework.API.StartupClassConfigurations.Swagger;
+global using $ext_safeprojectname$.WebFramework.API.StartupClassConfigurations.Swagger;
 global using Microsoft.AspNetCore.Mvc;
 global using Microsoft.AspNetCore.Authorization;
-global using MS2Project.WebFramework.API.Bases;
+global using $ext_safeprojectname$.WebFramework.API.Bases;
 global using MediatR;
-global using MS2Project.Common.ExceptionTools;
+global using $ext_safeprojectname$.Common.ExceptionTools;
 global using System.Threading;
 global using System.Threading.Tasks;
 global using System;

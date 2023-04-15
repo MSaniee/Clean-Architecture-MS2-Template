@@ -1,7 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using System.Collections.Concurrent;
 
-namespace MS2Project.Infrastructure.Data.SqlServer.EfCore.Tools;
+namespace $ext_safeprojectname$.Infrastructure.Data.SqlServer.EfCore.Tools;
 
 /// <summary>
 /// Based on https://andrewlock.net/strongly-typed-ids-in-ef-core-using-strongly-typed-entity-ids-to-avoid-primitive-obsession-part-4/

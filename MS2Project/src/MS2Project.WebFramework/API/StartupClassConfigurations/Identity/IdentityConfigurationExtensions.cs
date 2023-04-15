@@ -1,11 +1,11 @@
 ﻿using Microsoft.AspNetCore.Identity;
 using Microsoft.Extensions.DependencyInjection;
-using MS2Project.Domain.Core.Settings.Site;
-using MS2Project.Domain.UserAggregate;
-using MS2Project.Domain.UserAggregate.Roles;
-using MS2Project.Infrastructure.Data.SqlServer.EfCore.Context;
+using $ext_safeprojectname$.Domain.Core.Settings.Site;
+using $ext_safeprojectname$.Domain.UserAggregate;
+using $ext_safeprojectname$.Domain.UserAggregate.Roles;
+using $ext_safeprojectname$.Infrastructure.Data.SqlServer.EfCore.Context;
 
-namespace MS2Project.WebFramework.API.StartupClassConfigurations.Identity;
+namespace $ext_safeprojectname$.WebFramework.API.StartupClassConfigurations.Identity;
 
 public static class IdentityConfigurationExtensions
 {

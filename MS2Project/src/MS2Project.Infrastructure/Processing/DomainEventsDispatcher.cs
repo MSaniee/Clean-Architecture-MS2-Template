@@ -1,7 +1,7 @@
 ﻿using Autofac.Core;
-using MS2Project.Application.Bases.DomainEvents;
+using $ext_safeprojectname$.Application.Bases.DomainEvents;
 
-namespace MS2Project.Infrastructure.Processing;
+namespace $ext_safeprojectname$.Infrastructure.Processing;
 
 public class DomainEventsDispatcher : IDomainEventsDispatcher, IScopedDependency
 {

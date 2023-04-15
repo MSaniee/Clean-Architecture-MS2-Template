@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MS2Project.Infrastructure.Data.SqlServer.EfCore.Tools
+namespace $ext_safeprojectname$.Infrastructure.Data.SqlServer.EfCore.Tools
 {
     public class ForeignKeys
     {

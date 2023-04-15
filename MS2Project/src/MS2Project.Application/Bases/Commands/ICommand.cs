@@ -1,4 +1,4 @@
-﻿namespace MS2Project.Application.Bases.Commands;
+﻿namespace $ext_safeprojectname$.Application.Bases.Commands;
 
 public interface ICommand : IRequest
 {

@@ -1,11 +1,11 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using MS2Project.Domain.UserAggregate;
-using MS2Project.Infrastructure.Data.SqlServer.EfCore.Context;
+using $ext_safeprojectname$.Domain.UserAggregate;
+using $ext_safeprojectname$.Infrastructure.Data.SqlServer.EfCore.Context;
 using System.Net.Http.Headers;
 
-namespace MS2Project.API.IntegrationTests;
+namespace $ext_safeprojectname$.API.IntegrationTests;
 
-[TestCaseOrderer("MS2Project.API.IntegrationTests", "MS2Project.API.IntegrationTests")]
+[TestCaseOrderer("$ext_safeprojectname$.API.IntegrationTests", "$ext_safeprojectname$.API.IntegrationTests")]
 public class IntegrationTest
 {
     private readonly DbContextOptions<ApplicationDbContext> _optionsDb;

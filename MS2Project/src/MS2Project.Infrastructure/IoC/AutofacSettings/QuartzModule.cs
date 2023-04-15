@@ -1,6 +1,6 @@
 ﻿using Autofac;
 
-namespace MS2Project.Infrastructure.IoC.AutofacSettings;
+namespace $ext_safeprojectname$.Infrastructure.IoC.AutofacSettings;
 
 //public class QuartzModule : Autofac.Module
 //{

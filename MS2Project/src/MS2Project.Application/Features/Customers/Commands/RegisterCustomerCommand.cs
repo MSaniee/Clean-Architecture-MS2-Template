@@ -1,8 +1,8 @@
-﻿using MS2Project.Application.Dtos.Customers;
-using MS2Project.Domain.Core.Bases.Repositories;
-using MS2Project.Domain.CustomerAggregate;
+﻿using $ext_safeprojectname$.Application.Dtos.Customers;
+using $ext_safeprojectname$.Domain.Core.Bases.Repositories;
+using $ext_safeprojectname$.Domain.CustomerAggregate;
 
-namespace MS2Project.Application.Features.Customers.Commands;
+namespace $ext_safeprojectname$.Application.Features.Customers.Commands;
 
 public record RegisterCustomerCommand(
     string Email,

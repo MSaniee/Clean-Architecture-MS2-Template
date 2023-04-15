@@ -1,4 +1,4 @@
-﻿namespace MS2Project.Domain.Core.Settings.RabbitMQ
+﻿namespace $ext_safeprojectname$.Domain.Core.Settings.RabbitMQ
 {
     public class RabbitMqOptions
     {

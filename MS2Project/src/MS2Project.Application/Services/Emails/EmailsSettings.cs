@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MS2Project.Application.Services.Emails;
+namespace $ext_safeprojectname$.Application.Services.Emails;
 
 public class EmailsSettings
 {

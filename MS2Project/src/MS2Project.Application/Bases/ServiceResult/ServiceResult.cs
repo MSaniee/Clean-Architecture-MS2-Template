@@ -1,7 +1,7 @@
-﻿using MS2Project.Common.EnumTools;
-using MS2Project.Domain.Core.Enums;
+﻿using $ext_safeprojectname$.Common.EnumTools;
+using $ext_safeprojectname$.Domain.Core.Enums;
 
-namespace MS2Project.Application.Bases.ServiceResult;
+namespace $ext_safeprojectname$.Application.Bases.ServiceResult;
 
 public class SResult
 {

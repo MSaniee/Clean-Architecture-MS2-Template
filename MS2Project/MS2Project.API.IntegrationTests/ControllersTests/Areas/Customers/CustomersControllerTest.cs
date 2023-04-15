@@ -1,11 +1,11 @@
-﻿using MS2Project.WebFramework.API.Bases;
+﻿using $ext_safeprojectname$.WebFramework.API.Bases;
 using System.Net.Http.Json;
 using System.Net;
 using FluentAssertions;
 
-namespace MS2Project.API.IntegrationTests.ControllersTests.Areas.Customers;
+namespace $ext_safeprojectname$.API.IntegrationTests.ControllersTests.Areas.Customers;
 
-[Collection("MS2ProjectAPI - Full Integration Test #1")]
+[Collection("$ext_safeprojectname$API - Full Integration Test #1")]
 public class CustomersControllerTest : IntegrationTest
 {
     public CustomersControllerTest(CustomWebApplicationFactory<Program> webApplicationFactory)

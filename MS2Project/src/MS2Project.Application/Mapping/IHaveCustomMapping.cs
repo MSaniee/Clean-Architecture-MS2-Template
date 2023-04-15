@@ -1,6 +1,6 @@
 ﻿using AutoMapper;
 
-namespace MS2Project.Application.Mapping
+namespace $ext_safeprojectname$.Application.Mapping
 {
     public interface IHaveCustomMapping
     {

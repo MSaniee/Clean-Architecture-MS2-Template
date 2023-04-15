@@ -1,7 +1,7 @@
 ﻿using MaxMind.GeoIP2;
 using System.IO;
 
-namespace MS2Project.Common.GeoLocation
+namespace $ext_safeprojectname$.Common.GeoLocation
 {
     public class GeoIP
     {

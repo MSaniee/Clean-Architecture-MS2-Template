@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace MS2Project.Domain.Core.Utilities.PagesSettings
+namespace $ext_safeprojectname$.Domain.Core.Utilities.PagesSettings
 {
     public class Pagable
     {

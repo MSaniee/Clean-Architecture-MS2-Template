@@ -1,6 +1,6 @@
-﻿using MS2Project.Domain.CustomerAggregate;
+﻿using $ext_safeprojectname$.Domain.CustomerAggregate;
 
-namespace MS2Project.Application.Features.Customers.Commands;
+namespace $ext_safeprojectname$.Application.Features.Customers.Commands;
 
 public record MarkCustomerAsWelcomedCommand : InternalCommandBase<Unit>
 {

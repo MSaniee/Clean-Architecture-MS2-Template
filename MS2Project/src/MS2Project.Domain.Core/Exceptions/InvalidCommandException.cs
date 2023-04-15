@@ -1,4 +1,4 @@
-﻿namespace MS2Project.Domain.Core.Exceptions;
+﻿namespace $ext_safeprojectname$.Domain.Core.Exceptions;
 
 public class InvalidCommandException : Exception
 {

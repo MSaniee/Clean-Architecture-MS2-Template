@@ -1,8 +1,8 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using MS2Project.WebFramework.API.Filters;
+using $ext_safeprojectname$.WebFramework.API.Filters;
 
-namespace MS2Project.WebFramework.API.Bases;
+namespace $ext_safeprojectname$.WebFramework.API.Bases;
 
 [ApiController]
 [Authorize]

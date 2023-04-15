@@ -1,10 +1,10 @@
 using Microsoft.Extensions.Caching.Memory;
 using Microsoft.Extensions.Configuration;
-using MS2Project.Domain.Core.Settings.Site;
-using MS2Project.WebFramework.API.StartupClassConfigurations;
-using MS2Project.WebFramework.API.StartupClassConfigurations.Autufac;
-using MS2Project.WebFramework.API.StartupClassConfigurations.Identity;
-using MS2Project.WebFramework.API.StartupClassConfigurations.Middlewares;
+using $ext_safeprojectname$.Domain.Core.Settings.Site;
+using $ext_safeprojectname$.WebFramework.API.StartupClassConfigurations;
+using $ext_safeprojectname$.WebFramework.API.StartupClassConfigurations.Autufac;
+using $ext_safeprojectname$.WebFramework.API.StartupClassConfigurations.Identity;
+using $ext_safeprojectname$.WebFramework.API.StartupClassConfigurations.Middlewares;
 
 WebApplicationBuilder builder = WebApplication.CreateBuilder(args);
 

@@ -22,8 +22,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\MS2Project.Common\MS2Project.Common.csproj" />
-    <ProjectReference Include="..\MS2Project.Domain\MS2Project.Domain.csproj" />
+    <ProjectReference Include="..\$ext_safeprojectname$.Common\$ext_safeprojectname$.Common.csproj" />
+    <ProjectReference Include="..\$ext_safeprojectname$.Domain\$ext_safeprojectname$.Domain.csproj" />
   </ItemGroup>
 
 </Project>

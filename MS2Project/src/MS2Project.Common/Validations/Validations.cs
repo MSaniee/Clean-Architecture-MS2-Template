@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text.RegularExpressions;
 
-namespace MS2Project.Common.Validations
+namespace $ext_safeprojectname$.Common.Validations
 {
     public class Validations
     {

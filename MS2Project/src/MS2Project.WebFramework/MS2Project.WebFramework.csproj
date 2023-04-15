@@ -24,9 +24,9 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\MS2Project.Application\MS2Project.Application.csproj" />
-    <ProjectReference Include="..\MS2Project.Common\MS2Project.Common.csproj" />
-    <ProjectReference Include="..\MS2Project.Infrastructure\MS2Project.Infrastructure.csproj" />
+    <ProjectReference Include="..\$ext_safeprojectname$.Application\$ext_safeprojectname$.Application.csproj" />
+    <ProjectReference Include="..\$ext_safeprojectname$.Common\$ext_safeprojectname$.Common.csproj" />
+    <ProjectReference Include="..\$ext_safeprojectname$.Infrastructure\$ext_safeprojectname$.Infrastructure.csproj" />
   </ItemGroup>
 
   <ItemGroup>

@@ -1,6 +1,6 @@
-﻿using MS2Project.Domain.CustomerAggregate;
+﻿using $ext_safeprojectname$.Domain.CustomerAggregate;
 
-namespace MS2Project.Infrastructure.Domain.CustomerAggregate;
+namespace $ext_safeprojectname$.Infrastructure.Domain.CustomerAggregate;
 
 public class CustomerRepository : Repository<Customer>, ICustomerRepository, IScopedDependency
 {

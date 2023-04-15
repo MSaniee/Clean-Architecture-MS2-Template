@@ -1,4 +1,4 @@
-﻿namespace MS2Project.Infrastructure.Data.Bases;
+﻿namespace $ext_safeprojectname$.Infrastructure.Data.Bases;
 
 public class Repository<TEntity> : IRepository<TEntity> where TEntity : class, IEntity
 {

@@ -1,10 +1,10 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using MS2Project.Application.Bases.ServiceResult;
-using MS2Project.Common.EnumTools;
-using MS2Project.Domain.Core.Enums;
+using $ext_safeprojectname$.Application.Bases.ServiceResult;
+using $ext_safeprojectname$.Common.EnumTools;
+using $ext_safeprojectname$.Domain.Core.Enums;
 using Newtonsoft.Json;
 
-namespace MS2Project.WebFramework.API.Bases;
+namespace $ext_safeprojectname$.WebFramework.API.Bases;
 
 public class ApiResult
 {

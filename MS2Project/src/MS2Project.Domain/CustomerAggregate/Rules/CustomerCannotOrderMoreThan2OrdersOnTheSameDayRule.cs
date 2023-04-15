@@ -1,5 +1,5 @@
 ﻿
-namespace MS2Project.Domain.CustomerAggregate.Rules;
+namespace $ext_safeprojectname$.Domain.CustomerAggregate.Rules;
 
 //public class CustomerCannotOrderMoreThan2OrdersOnTheSameDayRule : IBusinessRule
 //{

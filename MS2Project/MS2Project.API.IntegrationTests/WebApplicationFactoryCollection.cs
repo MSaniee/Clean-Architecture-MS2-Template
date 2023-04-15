@@ -1,6 +1,6 @@
-﻿namespace MS2Project.API.IntegrationTests;
+﻿namespace $ext_safeprojectname$.API.IntegrationTests;
 
-[CollectionDefinition("MS2ProjectAPI - Full Integration Test #1")]
+[CollectionDefinition("$ext_safeprojectname$API - Full Integration Test #1")]
 public class WebApplicationFactoryCollection : ICollectionFixture<CustomWebApplicationFactory<Program>>
 {
     // This class has no code, and is never created. Its purpose is simply

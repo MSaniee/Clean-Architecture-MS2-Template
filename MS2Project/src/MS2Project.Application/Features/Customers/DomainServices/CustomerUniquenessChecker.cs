@@ -1,7 +1,7 @@
-﻿using MS2Project.Application.Interfaces.ReadRepositories.Customers;
-using MS2Project.Domain.CustomerAggregate;
+﻿using $ext_safeprojectname$.Application.Interfaces.ReadRepositories.Customers;
+using $ext_safeprojectname$.Domain.CustomerAggregate;
 
-namespace MS2Project.Application.Features.Customers.DomainServices;
+namespace $ext_safeprojectname$.Application.Features.Customers.DomainServices;
 
 public class CustomerUniquenessChecker : ICustomerUniquenessChecker, IScopedDependency
 {

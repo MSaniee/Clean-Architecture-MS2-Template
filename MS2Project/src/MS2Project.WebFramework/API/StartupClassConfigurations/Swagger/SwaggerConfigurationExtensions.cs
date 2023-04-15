@@ -6,7 +6,7 @@ using Swashbuckle.AspNetCore.Filters;
 using Swashbuckle.AspNetCore.SwaggerGen;
 using Swashbuckle.AspNetCore.SwaggerUI;
 
-namespace MS2Project.WebFramework.API.StartupClassConfigurations.Swagger;
+namespace $ext_safeprojectname$.WebFramework.API.StartupClassConfigurations.Swagger;
 
 public static class SwaggerConfigurationExtensions
 {
@@ -44,14 +44,14 @@ public static class SwaggerConfigurationExtensions
             options.ExampleFilters();
 
             //کد مربوط به اضافه کردن داکیومنت
-            var xmlDocPath = Path.Combine(AppContext.BaseDirectory, "MS2Project.API.xml");
+            var xmlDocPath = Path.Combine(AppContext.BaseDirectory, "$ext_safeprojectname$.API.xml");
             //show controller XML comments like summary
             options.IncludeXmlComments(xmlDocPath, true);
 
             //options.DescribeAllEnumsAsStrings();
 
-            options.SwaggerDoc("v1", new OpenApiInfo() { Title = "MS2Project-v1", Version = "v1" });
-            options.SwaggerDoc("v2", new OpenApiInfo() { Title = "MS2Project-v2", Version = "v2" });
+            options.SwaggerDoc("v1", new OpenApiInfo() { Title = "$ext_safeprojectname$-v1", Version = "v1" });
+            options.SwaggerDoc("v2", new OpenApiInfo() { Title = "$ext_safeprojectname$-v2", Version = "v2" });
 
             //Add Multilingual 
             //options.OperationFilter<SwaggerLanguageHeader>();
@@ -91,8 +91,8 @@ public static class SwaggerConfigurationExtensions
         app.UseSwaggerUI(options =>
         {
             options.DocExpansion(DocExpansion.None);
-            options.SwaggerEndpoint("/swagger/v1/swagger.json", "MS2Project-v1");
-            options.SwaggerEndpoint("/swagger/v2/swagger.json", "MS2Project-v2");
+            options.SwaggerEndpoint("/swagger/v1/swagger.json", "$ext_safeprojectname$-v1");
+            options.SwaggerEndpoint("/swagger/v2/swagger.json", "$ext_safeprojectname$-v2");
         });
     }
 }

@@ -1,9 +1,9 @@
 ﻿using AutoMapper;
-using MS2Project.Application.Mapping;
-using MS2Project.Domain.Core.Bases;
+using $ext_safeprojectname$.Application.Mapping;
+using $ext_safeprojectname$.Domain.Core.Bases;
 using System.ComponentModel.DataAnnotations;
 
-namespace MS2Project.Application.Dtos;
+namespace $ext_safeprojectname$.Application.Dtos;
 
 public abstract class BaseDto<TDto, TEntity, TKey> : IHaveCustomMapping
        where TDto : class, new()

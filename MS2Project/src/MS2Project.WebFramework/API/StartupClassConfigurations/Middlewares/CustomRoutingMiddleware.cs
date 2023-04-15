@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Builder;
 
-namespace MS2Project.WebFramework.API.StartupClassConfigurations.Middlewares
+namespace $ext_safeprojectname$.WebFramework.API.StartupClassConfigurations.Middlewares
 {
     public static class CustomRoutingMiddleware
     {

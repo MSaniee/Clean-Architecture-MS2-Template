@@ -1,6 +1,6 @@
-﻿using MS2Project.Application.Services.Emails;
+﻿using $ext_safeprojectname$.Application.Services.Emails;
 
-namespace MS2Project.Infrastructure.Services.Emails;
+namespace $ext_safeprojectname$.Infrastructure.Services.Emails;
 
 public class EmailSender : IEmailSender, IScopedDependency
 {

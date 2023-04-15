@@ -1,7 +1,7 @@
-﻿using MS2Project.Application.Configurations;
-using MS2Project.WebFramework.API.StartupClassConfigurations.Middlewares;
+﻿using $ext_safeprojectname$.Application.Configurations;
+using $ext_safeprojectname$.WebFramework.API.StartupClassConfigurations.Middlewares;
 
-namespace MS2Project.WebFramework.API.Configuration;
+namespace $ext_safeprojectname$.WebFramework.API.Configuration;
 
 public class ExecutionContextAccessor : IExecutionContextAccessor
 {

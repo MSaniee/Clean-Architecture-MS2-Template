@@ -1,11 +1,11 @@
 ﻿global using MediatR;
-global using MS2Project.Domain.Core.Enums;
+global using $ext_safeprojectname$.Domain.Core.Enums;
 global using System;
 global using System.Collections.Generic;
 global using System.Net;
 global using System.Linq;
 global using System.Reflection;
-global using MS2Project.Domain.Core.Bases.Entities;
+global using $ext_safeprojectname$.Domain.Core.Bases.Entities;
 global using System.Linq.Expressions;
 global using System.Threading;
 global using System.Threading.Tasks;

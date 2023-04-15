@@ -1,10 +1,10 @@
-﻿using MS2Project.Application.Bases.Commands;
-using MS2Project.Application.Bases.DomainEvents;
-using MS2Project.Application.Bases.Processing;
-using MS2Project.Application.Features.Customers.Notifications;
-using MS2Project.Infrastructure.Processing;
+﻿using $ext_safeprojectname$.Application.Bases.Commands;
+using $ext_safeprojectname$.Application.Bases.DomainEvents;
+using $ext_safeprojectname$.Application.Bases.Processing;
+using $ext_safeprojectname$.Application.Features.Customers.Notifications;
+using $ext_safeprojectname$.Infrastructure.Processing;
 
-namespace MS2Project.Infrastructure.IoC.AutofacSettings;
+namespace $ext_safeprojectname$.Infrastructure.IoC.AutofacSettings;
 
 public class ProcessingModule : Autofac.Module
 {

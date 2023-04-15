@@ -1,6 +1,6 @@
-﻿using MS2Project.Domain.Core.Bases;
+﻿using $ext_safeprojectname$.Domain.Core.Bases;
 
-namespace MS2Project.Domain.CustomerAggregate;
+namespace $ext_safeprojectname$.Domain.CustomerAggregate;
 
 public partial class Customer : BaseEntity<CustomerId>, IAggregateRoot
 {

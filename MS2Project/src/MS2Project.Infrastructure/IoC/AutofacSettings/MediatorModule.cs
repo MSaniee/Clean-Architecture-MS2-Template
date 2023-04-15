@@ -2,10 +2,10 @@
 using Autofac.Features.Variance;
 using FluentValidation;
 using MediatR.Pipeline;
-using MS2Project.Application.Bases.Validation;
-using MS2Project.Infrastructure.Processing;
+using $ext_safeprojectname$.Application.Bases.Validation;
+using $ext_safeprojectname$.Infrastructure.Processing;
 
-namespace MS2Project.Infrastructure.IoC.AutofacSettings;
+namespace $ext_safeprojectname$.Infrastructure.IoC.AutofacSettings;
 
 public class MediatorModule : Autofac.Module
 {

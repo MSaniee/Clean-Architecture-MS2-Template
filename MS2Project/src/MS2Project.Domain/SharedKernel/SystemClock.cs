@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MS2Project.Domain.SharedKernel;
+namespace $ext_safeprojectname$.Domain.SharedKernel;
 
 public static class SystemClock
 {

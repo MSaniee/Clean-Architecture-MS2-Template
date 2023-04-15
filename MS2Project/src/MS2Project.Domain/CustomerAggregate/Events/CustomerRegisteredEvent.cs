@@ -1,4 +1,4 @@
-﻿namespace MS2Project.Domain.CustomerAggregate.Events;
+﻿namespace $ext_safeprojectname$.Domain.CustomerAggregate.Events;
 
 public class CustomerRegisteredEvent : DomainEventBase
 {

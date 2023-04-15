@@ -1,6 +1,6 @@
-﻿using MS2Project.Domain.Core.DILifeTimesType;
+﻿using $ext_safeprojectname$.Domain.Core.DILifeTimesType;
 
-namespace MS2Project.Application.Interfaces.DataInitializer
+namespace $ext_safeprojectname$.Application.Interfaces.DataInitializer
 {
     public interface IDataInitializer : IScopedDependency
     {

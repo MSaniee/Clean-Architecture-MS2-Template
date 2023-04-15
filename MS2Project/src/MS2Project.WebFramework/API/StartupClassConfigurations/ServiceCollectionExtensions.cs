@@ -5,11 +5,11 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using MS2Project.Domain.Core.Settings.Site;
-using MS2Project.Infrastructure.Data.SqlServer.EfCore.Context;
-using MS2Project.Infrastructure.Data.SqlServer.EfCore.Tools;
+using $ext_safeprojectname$.Domain.Core.Settings.Site;
+using $ext_safeprojectname$.Infrastructure.Data.SqlServer.EfCore.Context;
+using $ext_safeprojectname$.Infrastructure.Data.SqlServer.EfCore.Tools;
 
-namespace MS2Project.WebFramework.API.StartupClassConfigurations;
+namespace $ext_safeprojectname$.WebFramework.API.StartupClassConfigurations;
 
 public static class ServiceCollectionExtensions
 {

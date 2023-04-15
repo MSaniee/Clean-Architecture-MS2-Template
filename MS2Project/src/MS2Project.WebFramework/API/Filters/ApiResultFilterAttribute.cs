@@ -1,9 +1,9 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Filters;
-using MS2Project.Domain.Core.Enums;
-using MS2Project.WebFramework.API.Bases;
+using $ext_safeprojectname$.Domain.Core.Enums;
+using $ext_safeprojectname$.WebFramework.API.Bases;
 
-namespace MS2Project.WebFramework.API.Filters
+namespace $ext_safeprojectname$.WebFramework.API.Filters
 {
     public class ApiResultFilterAttribute : ActionFilterAttribute
     {

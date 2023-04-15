@@ -1,7 +1,7 @@
 ﻿using Autofac;
-using MS2Project.Application.Dtos;
+using $ext_safeprojectname$.Application.Dtos;
 
-namespace MS2Project.Infrastructure.IoC.AutofacSettings
+namespace $ext_safeprojectname$.Infrastructure.IoC.AutofacSettings
 {
     public class LifeTimeModule : Autofac.Module
     {
